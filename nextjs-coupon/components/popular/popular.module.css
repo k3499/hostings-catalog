@@ -43,9 +43,34 @@
     top: 22px;
     cursor: help;
 }
-.popular__card-img-container{
+.popular__cardImgContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+.popular__cardLink{
+    margin-top: 5px;
+}
+.popular__cardImg{
+    max-height: 100%;
+    max-width: 100%;
+    border: 1px solid #31303e;
+    box-sizing: border-box;
+}
+.popular__cardTitle{
+    padding: 0 20px 0 0;
+    margin: 8px 0 15px;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+.popular__promo-code{
+    position: relative;
+    background: #2D2C3A;
+    border: 1px solid #31313D;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #9997b3;
+    border-radius: 7px;
 }

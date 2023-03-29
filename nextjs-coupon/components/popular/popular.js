@@ -13,12 +13,14 @@ export default function Popular() {
                         <a className={styles.popular__info}>
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faCircleInfo}></FontAwesomeIcon>
                         </a>
-                        <div className={styles.popular__card-img-container}>
-                            <a href="#" class="popular__card-link"><img class="popular__card-img" src="/images/promokod-csfail.jpg" alt="" /></a>
+                        <div className={styles.popular__cardImgContainer}>
+                            <a href="#" className={styles.popular__cardLink}>
+                                <img className={styles.popular__cardImg} src="/images/promokod-csfail.jpg" alt="" />
+                            </a>
                         </div>
-                        <h2 class="popular__card-title">Промокод CSFAIL</h2>
-                        <div class="popular__promo-wrap">
-                            <div class="popular__promo-code">DATAGAME<button class="popular__promo-copy"><i class="fa-regular fa-copy"></i></button></div>    
+                        <h2 className={styles.popular__cardTitle}>Промокод CSFAIL</h2>
+                        <div>
+                            <div className={styles.popular__promoCode}>DATAGAME<button class="popular__promo-copy"><i class="fa-regular fa-copy"></i></button></div>    
                         </div>
                         <a href="#" target="_blank" class="button popular__promo-site-link">Получить</a>
                     </article>
