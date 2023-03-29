@@ -1,0 +1,14 @@
+:root {
+  --bgmain: #1F1E24;
+  --bgsecond: #2D2C3A;
+  --bgcard: #282834;
+  --purple: #7a5fea;
+  --blue: #00d4ff;
+  --white: #fff;
+  --lime: #D8FF20;
+}
+body{
+  background:#624FC5;
+  color: #E3E4F8;
+  font-family: 'Golos Text', sans-serif;
+}

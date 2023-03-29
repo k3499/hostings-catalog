@@ -1,0 +1,44 @@
+.main__banner{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 300px;
+    border-radius: 20px;
+    padding: 25px 45px;
+    background: linear-gradient(45deg, var(--purple) 20%, var(--blue) 100%);
+}
+.main__wrapper{
+    max-width: 355px;
+}
+.main__title{
+    font-family: 'Russo One', sans-serif;
+    color: #211F2A;
+    font-size: 3rem;
+    padding: 0;
+    margin: 25px 0 0;
+    letter-spacing: 1px;
+    font-style: italic;
+    text-shadow: -4px 3px 0px rgb(82 70 179 / 55%);
+}
+.main__secondTitle{
+    font-family: 'Russo One', sans-serif;
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    text-shadow: -4px 3px 0px rgb(82 70 179 / 55%);
+}
+.main__subtitle{
+    font-size: 0.95rem;
+    max-width: 280px;
+    margin: 10px 0 0;
+}
+.main__banner-kerambit-bg{
+    width: 402px;
+    height: 370px;
+    background: url(/images/banner-kerambit.png) no-repeat;
+    position: absolute;
+    right: 70px;
+    top: -36px;
+}

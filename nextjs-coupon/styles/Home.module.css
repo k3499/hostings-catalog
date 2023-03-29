@@ -1,0 +1,14 @@
+.wrapper{
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  background: #1F1E24;
+  min-height: calc(100vh - 40px);
+}
+.main{
+  background: var(--bgsecond);
+  width: 100%;
+  margin: 0 20px;
+  border-radius: 20px;
+  padding: 25px;
+}
