@@ -6,9 +6,10 @@
   min-height: calc(100vh - 40px);
 }
 .main{
+  box-sizing: border-box;
   background: var(--bgsecond);
-  width: 100%;
+  width: calc(100% - 260px);
   margin: 0 20px;
   border-radius: 20px;
-  padding: 25px;
+  padding: 0 25px 25px 25px;
 }

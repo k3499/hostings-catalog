@@ -10,67 +10,8 @@
 }
 .popular__wrapper{
     display: flex;
-    row-gap: 30px;
+    row-gap: 50px;
     column-gap: 30px;
     flex-direction: row;
     flex-wrap: wrap;
-}
-.popular__card{
-    position: relative;
-    width: calc(33.333% - 20px);
-    min-height: 287px;
-    background: var(--bgcard);
-    border-radius: 13px;
-    border: 2px solid #343341;
-    box-sizing: border-box;
-    padding: 13px;
-}
-.popular__money{
-    position: absolute;
-    top: -9px;
-    left: -11px;
-    background: var(--lime);
-    color: #2D2C3A;
-    font-weight: 500;
-    padding: 7px 5px;
-    z-index: 0;
-    border-radius: 5px 5px 0 5px;
-}
-.popular__info{
-    position: absolute;
-    color: #5B5B67;
-    right: 18px;
-    top: 22px;
-    cursor: help;
-}
-.popular__cardImgContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-.popular__cardLink{
-    margin-top: 5px;
-}
-.popular__cardImg{
-    max-height: 100%;
-    max-width: 100%;
-    border: 1px solid #31303e;
-    box-sizing: border-box;
-}
-.popular__cardTitle{
-    padding: 0 20px 0 0;
-    margin: 8px 0 15px;
-    font-weight: normal;
-    font-size: 1.2rem;
-}
-.popular__promo-code{
-    position: relative;
-    background: #2D2C3A;
-    border: 1px solid #31313D;
-    padding: 10px;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #9997b3;
-    border-radius: 7px;
 }

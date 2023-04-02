@@ -1,0 +1,16 @@
+.singleHead{
+    display: flex;
+    height: 362px;
+}
+.singleHead__swiper{
+    width: calc( 100% - 235px );
+    background: #282834;
+}
+.singleHead__codeWrap{
+    width: 235px;
+    margin-top: 30px;
+    background: #282834;
+}
+.swiperSlideImage{
+    border-radius: 20px;
+}

@@ -11,17 +11,15 @@
     max-width: 355px;
 }
 .main__title{
-    font-family: 'Russo One', sans-serif;
     color: #211F2A;
     font-size: 3rem;
     padding: 0;
-    margin: 25px 0 0;
+    margin: 0;
     letter-spacing: 1px;
     font-style: italic;
     text-shadow: -4px 3px 0px rgb(82 70 179 / 55%);
 }
 .main__secondTitle{
-    font-family: 'Russo One', sans-serif;
     color: #fff;
     font-size: 3rem;
     letter-spacing: 2px;
@@ -34,11 +32,25 @@
     max-width: 280px;
     margin: 10px 0 0;
 }
-.main__banner-kerambit-bg{
+.main__bannerKerambitBg{
     width: 402px;
     height: 370px;
     background: url(/images/banner-kerambit.png) no-repeat;
     position: absolute;
     right: 70px;
     top: -36px;
+}
+.main__codeWrapper{
+    display: flex;
+}
+.main__link{
+    background: #1f1e24;
+    border: 1px solid #31313D;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    margin-top: 27px;
+    color: #9997b3;
+    border-radius: 7px;
+    display: inline-block;
+    text-decoration: none;
 }
