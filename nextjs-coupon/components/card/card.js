@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo, faCopy } from "@fortawesome/free-solid-svg-icons";
 import styles from './card.module.css';
 import utils from '../../styles/utils.module.css';
+import logoFail from "/public/images/promokod-csfail.jpg";
 
 export default function Card() {
     return (
@@ -14,6 +16,13 @@ export default function Card() {
             <div className={styles.popular__cardImgContainer}>
                 <Link href="/csfail-promokody-na-popolnenie" className={styles.popular__cardLink}>
                     <img className={styles.popular__cardImg} src="/images/promokod-csfail.jpg" alt="" />
+                    <Image
+                        className={styles.popular__cardImg}
+                        loading="lazy"
+                        src={logoFail}
+                        placeholder="blur"
+                        alt="csfail промокод"
+                    />
                 </Link>
             </div>
             <h2 className={styles.popular__cardTitle}>Промокод CSFAIL</h2>
