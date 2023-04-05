@@ -1,0 +1,17 @@
+.category__title {
+  font-size: 1.3rem;
+  margin: 35px 0 10px;
+}
+.category__hr {
+  height: 1px;
+  background: #464553;
+  border-top: 1px solid #292836;
+  margin-bottom: 25px;
+}
+.category__wrapper {
+  display: flex;
+  row-gap: 50px;
+  column-gap: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
