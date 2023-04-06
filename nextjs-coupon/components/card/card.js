@@ -1,12 +1,13 @@
-import Link from 'next/link';
+import Link from 'next/link'
 import Image from 'next/image'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleInfo, faCopy } from "@fortawesome/free-solid-svg-icons";
-import styles from './card.module.css';
-import utils from '../../styles/utils.module.css';
-import logoFail from "/public/images/promokod-csfail.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCircleInfo, faCopy } from "@fortawesome/free-solid-svg-icons"
+import styles from './card.module.css'
+import utils from '../../styles/utils.module.css'
+import logoFail from "/public/images/promokod-csfail.jpg"
 
-export default function Card() {
+export default function Card({site}) {
+    console.log(site);
     return (
         <article className={styles.popular__card}>
             <div className={styles.popular__money}>0.50$</div>
@@ -15,7 +16,6 @@ export default function Card() {
             </a>
             <div className={styles.popular__cardImgContainer}>
                 <Link href="/csfail-promokody-na-popolnenie" className={styles.popular__cardLink}>
-                    <img className={styles.popular__cardImg} src="/images/promokod-csfail.jpg" alt="" />
                     <Image
                         className={styles.popular__cardImg}
                         loading="lazy"
@@ -25,7 +25,7 @@ export default function Card() {
                     />
                 </Link>
             </div>
-            <h2 className={styles.popular__cardTitle}>Промокод CSFAIL</h2>
+            <h2 className={styles.popular__cardTitle}>Промокод {site.title}</h2>
             <div>
                 <div className={styles.popular__promoCode}>DATAGAME
                     <button className={styles.popular__promoCopy}><FontAwesomeIcon style={{fontSize:"20px"}} icon={faCopy}></FontAwesomeIcon></button>

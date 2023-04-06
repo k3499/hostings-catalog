@@ -8,10 +8,11 @@
 .singleHead__codeWrap{
     width: 256px;
     margin-top: 30px;
-    background: #282834;
+    background: #1f1e24;;
     margin-left: -20px;
     text-align: center;
     padding-left: 20px;
+    border-radius: 0 20px 20px;
 }
 .swiperSlideImage{
     border-radius: 20px;
@@ -34,6 +35,19 @@
     width: fit-content;
     margin: 0 auto;
     margin-bottom: 10px;
+}
+.singleHead__cardImgWrap{
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+}
+.singleHead__title{
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 40px 0 40px;
+    background: linear-gradient(45deg, #7a5fea 20%, var(--blue) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .singleHead__promoCopy{
     -webkit-font-smoothing: antialiased;

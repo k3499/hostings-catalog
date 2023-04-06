@@ -1,5 +1,6 @@
 import styles from "./singleHead.module.css"
 import utils from "../../styles/utils.module.css"
+import { Russo_One } from 'next/font/google';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCopy } from "@fortawesome/free-solid-svg-icons"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -9,6 +10,9 @@ import scrin from "/public/images/csgofail.jpg"
 import "swiper/css"
 import "swiper/css/a11y"
 import "swiper/css/autoplay"
+import logoFail from "/public/images/promokod-csfail.jpg"
+
+const russo = Russo_One({ subsets: ['latin', 'cyrillic'], weight: "400", })
 
 export default function SingleHead() {
   const swiperParameters = {
@@ -31,7 +35,7 @@ export default function SingleHead() {
               loading="lazy"
               src={scrin}
               placeholder="blur"
-              fill="true"
+              fill
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -52,7 +56,17 @@ export default function SingleHead() {
         </Swiper>
       </div>
       <div className={styles.singleHead__codeWrap}>
-        <div className={styles.singleHead__title}>Тестируем</div>
+        {/* <div className={styles.singleHead__cardImgWrap}>
+          <Image
+            className={styles.singleHead__cardImg}
+            loading="lazy"
+            src={logoFail}
+            placeholder="blur"
+            alt="csfail промокод"
+            width={206}
+          />
+        </div> */}
+        <p className={`${styles.singleHead__title} ${russo.className}`}>CSGOPOLYGON</p>
         <div className={styles.singleHead__code}>
           DATAGAME
           <button className={styles.singleHead__promoCopy}>
