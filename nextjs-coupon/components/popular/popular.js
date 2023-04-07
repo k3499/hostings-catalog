@@ -12,7 +12,7 @@ export default function Popular() {
            <div className={styles.popular__hr}></div>
            <div className={styles.popular__wrapper}>
            {Object.keys(sites).map(sitesId => (
-                <Card keys={sites[sitesId]} site={sites[sitesId]}/>
+                <Card key={sitesId} site={sites[sitesId]}/>
             ))}
            </div>
         </section>
