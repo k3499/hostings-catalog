@@ -13,6 +13,7 @@
     color: #E3E4F8;
     text-decoration: none;
     cursor: pointer;
+    font-size: 1.1rem;
 }
 .menu__link::before{
     font-family: "Font Awesome 6 Free";

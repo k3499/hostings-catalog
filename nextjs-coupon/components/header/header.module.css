@@ -1,5 +1,5 @@
 .header__wrapper{
-    width: 1200px;
+    max-width: 1200px;
     box-sizing: border-box;
     padding: 15px 20px;
     margin: 0 auto;
@@ -23,4 +23,20 @@
     transition: all .4s ease-in-out;
     background-size: 150% 150%;
     cursor: pointer;
+}
+.header__burger{
+    display: none;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+.header__topMenu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+@media (max-width: 925px) {
+    .header__burger{
+        display: block;
+    }
 }

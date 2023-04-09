@@ -25,7 +25,7 @@ export default function Card({site}) {
                     />
                 </Link>
             </div>
-            <h2 className={styles.popular__cardTitle}>Промокод {site.title}</h2>
+            <h2 className={styles.popular__cardTitle}><span>Промокод</span> {site.title}</h2>
             <div>
                 <div className={styles.popular__promoCode}>DATAGAME
                     <button className={styles.popular__promoCopy}><FontAwesomeIcon style={{fontSize:"20px"}} icon={faCopy}></FontAwesomeIcon></button>
