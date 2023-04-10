@@ -3,7 +3,6 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 import localFont from "next/font/local"
 import SitesContext from "../components/SitesContext/SitesContext"
 import App from "next/app"
-import MobileMenu from "../components/mobileMenu/mobileMenu"
 import "../styles/normalize.css"
 import "../styles/global.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
@@ -42,19 +41,18 @@ function MyApp({ Component, pageProps }) {
           mobileMenu={mobileMenu}
           handleMobileMenu={handleMobileMenu}
         />
-        {mobileMenu ? <MobileMenu /> : ""}
       </SitesContext.Provider>
     </div>
   )
 }
 
-MyApp.getInitialProps = async (appContext) => {
-  const appProps = await App.getInitialProps(appContext)
+// MyApp.getInitialProps = async (appContext) => {
+//   const appProps = await App.getInitialProps(appContext)
 
-  // Fetch data and add it to pageProps;
-  const pageProps = { data: "hello" }
+//   // Fetch data and add it to pageProps;
+//   const pageProps = { data: "hello" }
 
-  return { ...appProps, pageProps }
-}
+//   return { ...appProps, pageProps }
+// }
 
 export default MyApp

@@ -6,13 +6,12 @@ import Popular from "../components/popular/popular"
 import homeStyles from "../styles/Home.module.css"
 
 export default function Home({ mobileMenu, handleMobileMenu }) {
-  console.log(mobileMenu)
   return (
     <>
       <Head>
         <title>Главная страница</title>
       </Head>
-      <Header handleMobileMenu={handleMobileMenu} />
+      <Header handleMobileMenu={handleMobileMenu} mobileMenu={mobileMenu}/>
       <div className={homeStyles.wrapper}>
         <Sidebar />
         <main className={homeStyles.main}>
