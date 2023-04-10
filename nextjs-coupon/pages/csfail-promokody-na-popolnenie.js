@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from '../components/header/header';
 import Sidebar from '../components/sidebar/sidebar';
 import SingleHead from '../components/singleHead/singlehead';
+import SingleBody from '../components/singleBody/singleBody';
 import homeStyles from '../styles/Home.module.css';
 
 export default function csfail() {
@@ -18,6 +19,7 @@ export default function csfail() {
             <Sidebar/>
             <main className={homeStyles.main}> 
               <SingleHead/>
+              <SingleBody/>
             </main>
           </div>
       <footer></footer>

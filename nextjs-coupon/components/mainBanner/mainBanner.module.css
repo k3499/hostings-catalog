@@ -54,3 +54,30 @@
     display: inline-block;
     text-decoration: none;
 }
+@media (max-width: 1199px) {
+    .main__bannerKerambitBg{
+        right: 20px;
+    }
+}
+@media (max-width: 1099px) {
+    .main__title{
+        font-size: 3.3rem;
+    }
+    .main__secondTitle{
+        font-size: 2rem;
+    }
+    .main__link{
+        padding: 11px 10px;
+        font-size: 1rem;
+    }
+    .main__bannerKerambitBg{
+        right: 8px;
+        background-position-x: 100%;
+        background-size: 85%;
+        width: 378px;
+        height: 303px;
+    }
+    .main__banner{
+        min-height: 270px;
+    }
+}

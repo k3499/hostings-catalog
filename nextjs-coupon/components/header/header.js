@@ -1,19 +1,12 @@
-import Link from "next/link"
-import styles from "./header.module.css"
+import styles from './header.module.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
 
-export default function Header({data, handleMobileMenu}) {
-  console.log(handleMobileMenu)
-  function handleMobileMenuClick(){
-    handleMobileMenu()
-  }
+export default function Header() {
   return (
     <header>
       <div className={styles.header__wrapper}>
-        <Link 
-          className={styles.logo} 
-          href="/"
-          onClick={handleMobileMenuClick}
-        >
+        <Link className={styles.logo} href="/">
           Promokoders
         </Link>
         <a href="#" className={styles.button}>

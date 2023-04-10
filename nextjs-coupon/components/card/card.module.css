@@ -14,7 +14,6 @@
     text-decoration: none;
     font-size: 2rem;
 }
-
 .popular__card{
     position: relative;
     width: calc(33.333% - 20px);
@@ -62,7 +61,7 @@
     padding: 0 20px 0 0;
     margin: 8px 0 15px;
     font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .popular__promoCode{
     position: relative;
@@ -95,4 +94,25 @@
     box-sizing: border-box;
     text-align: center;
     margin-top: 14px;
+}
+@media (max-width: 1199px) {
+    .popular__cardTitle{
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 0;
+    }
+    .popular__cardTitle span{
+        display: block;
+    }
+}
+@media (max-width: 1030px) {
+    .popular__card{
+        width: calc(50% - 20px);
+        min-height: 287px;
+        background: var(--bgcard);
+        border-radius: 13px;
+        border: 2px solid #343341;
+        box-sizing: border-box;
+        padding: 13px;
+    }
 }
