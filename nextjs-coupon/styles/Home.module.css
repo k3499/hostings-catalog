@@ -16,3 +16,8 @@
   border-radius: 20px;
   padding: 0 25px 25px 25px;
 }
+@media (max-width: 925px) {
+  .wrapper {
+    padding: 75px 20px 20px 0;
+  }
+}

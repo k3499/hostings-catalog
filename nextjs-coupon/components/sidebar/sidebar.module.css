@@ -1,145 +1,145 @@
-.sidebar{
-    width: 260px;
-    padding: 20px 0 0 20px;
+.sidebar {
+  width: 260px;
+  padding: 0 0 0 20px;
 }
-.menu__list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin: 0;
+.menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin: 0;
 }
-.menu__link{
-    display: block;
-    color: #E3E4F8;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1.1rem;
+.menu__link {
+  display: block;
+  color: #e3e4f8;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.1rem;
 }
-.menu__link::before{
-    font-family: "Font Awesome 6 Free";
-    display: inline-block;
-    background: linear-gradient(45deg, var(--purple) 20%, var(--blue) 100%);
-    font-size: 1.2rem;
-    vertical-align: middle;
-    padding: 5px 8px;
-    margin-right: 10px;
-    border-radius: 3px;
+.menu__link::before {
+  font-family: "Font Awesome 6 Free";
+  display: inline-block;
+  background: linear-gradient(45deg, var(--purple) 20%, var(--blue) 100%);
+  font-size: 1.2rem;
+  vertical-align: middle;
+  padding: 5px 8px;
+  margin-right: 10px;
+  border-radius: 3px;
 }
-.menu__listItem{
-    margin-bottom: 10px;
-    cursor: pointer !important;
+.menu__listItem {
+  margin-bottom: 10px;
+  cursor: pointer !important;
 }
-.crashLink::before{
-    content: "";
-    background: url(/images/crash.png) no-repeat 50%;
-    width: 19px;
-    height: 25px;
-    transition: all .2s ease 0s;
+.crashLink::before {
+  content: "";
+  background: url(/images/crash.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+  transition: all 0.2s ease 0s;
 }
-.crashLink:hover::before{
-    background: url(/images/crash-active.png) no-repeat 50%;
-    transition: all .2s ease 0s;
+.crashLink:hover::before {
+  background: url(/images/crash-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
 }
-.crashLinkActive::before{
-    background: url(/images/crash-active.png) no-repeat 50%;
-    color: #E3E4F8;
-    -webkit-text-fill-color: #E3E4F8; 
+.crashLinkActive::before {
+  background: url(/images/crash-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
 }
-.jackpot::before{
-    content: "";
-    background: url(/images/jackpot.png) no-repeat 50%;
-    width: 19px;
-    height: 25px;
-    transition: all .2s ease 0s;
+.jackpot::before {
+  content: "";
+  background: url(/images/jackpot.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+  transition: all 0.2s ease 0s;
 }
-.jackpotActive::before{
-    background: url(/images/jackpot-active.png) no-repeat 50%;
-    color: #E3E4F8;
-    -webkit-text-fill-color: #E3E4F8; 
+.jackpotActive::before {
+  background: url(/images/jackpot-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
 }
-.jackpot:hover::before{
-    background: url(/images/jackpot-active.png) no-repeat 50%;
-    transition: all .2s ease 0s;
+.jackpot:hover::before {
+  background: url(/images/jackpot-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
 }
-.threeColor::before{
-    content: "";
-    background: url(/images/3color.png) no-repeat 50%;
-    width: 19px;
-    height: 25px;
+.threeColor::before {
+  content: "";
+  background: url(/images/3color.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
 }
-.threeColorActive::before{
-    background: url(/images/3color-active.png) no-repeat 50%;
-    color: #E3E4F8;
-    -webkit-text-fill-color: #E3E4F8; 
-    transition: all .2s ease 0s;
+.threeColorActive::before {
+  background: url(/images/3color-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
 }
-.threeColor:hover::before{
-    background: url(/images/3color-active.png) no-repeat 50%;
-    transition: all .2s ease 0s;
+.threeColor:hover::before {
+  background: url(/images/3color-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
 }
-.fourColor::before{
-    content: "";
-    background: url(/images/4color.png) no-repeat 50%;
-    width: 19px;
-    height: 25px;
+.fourColor::before {
+  content: "";
+  background: url(/images/4color.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
 }
-.fourColorActive::before{
-    background: url(/images/4color-active.png) no-repeat 50%;
-    color: #E3E4F8;
-    -webkit-text-fill-color: #E3E4F8; 
-    transition: all .2s ease 0s;
+.fourColorActive::before {
+  background: url(/images/4color-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
 }
-.fourColor:hover::before{
-    background: url(/images/4color-active.png) no-repeat 50%;
-    transition: all .2s ease 0s;
+.fourColor:hover::before {
+  background: url(/images/4color-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
 }
-.box::before{
-    content: "";
-    background: url(/images/box.png) no-repeat 50%;
-    width: 19px;
-    height: 25px;
+.box::before {
+  content: "";
+  background: url(/images/box.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
 }
-.boxActive::before{
-    background: url(/images/box-active.png) no-repeat 50%;
-    color: #E3E4F8;
-    -webkit-text-fill-color: #E3E4F8; 
-    transition: all .2s ease 0s;
+.boxActive::before {
+  background: url(/images/box-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
 }
-.box:hover::before{
-    background: url(/images/box-active.png) no-repeat 50%;
-    transition: all .2s ease 0s;
+.box:hover::before {
+  background: url(/images/box-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
 }
-.slots::before{
-    content: "";
-    background: url(/images/slots.png) no-repeat 50%;
-    width: 19px;
-    height: 25px;
+.slots::before {
+  content: "";
+  background: url(/images/slots.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
 }
-.slotsActive::before{
-    background: url(/images/slots-active.png) no-repeat 50%;
-    color: #E3E4F8;
-    -webkit-text-fill-color: #E3E4F8;
-    transition: all .2s ease 0s;
+.slotsActive::before {
+  background: url(/images/slots-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
 }
-.slots:hover::before{
-    background: url(/images/slots-active.png) no-repeat 50%;
-    transition: all .2s ease 0s;
+.slots:hover::before {
+  background: url(/images/slots-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
 }
-.sportBet::before{
-    content: "";
-    background: url(/images/sport.png) no-repeat 50%;
-    width: 19px;
-    height: 25px;
+.sportBet::before {
+  content: "";
+  background: url(/images/sport.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
 }
-.sportBetActive::before{
-    background: url(/images/slots-active.png) no-repeat 50%;
-    color: #E3E4F8;
-    -webkit-text-fill-color: #E3E4F8;
-    transition: all .2s ease 0s;
+.sportBetActive::before {
+  background: url(/images/slots-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
 }
-.sportBet:hover::before{
-    background: url(/images/slots-active.png) no-repeat 50%;
-    width: 19px;
-    height: 25px;
-    transition: all .2s ease 0s;
+.sportBet:hover::before {
+  background: url(/images/slots-active.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+  transition: all 0.2s ease 0s;
 }
