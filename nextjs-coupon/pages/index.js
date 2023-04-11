@@ -11,7 +11,7 @@ export default function Home({ mobileMenu, handleMobileMenu }) {
       <Head>
         <title>Главная страница</title>
       </Head>
-      <Header handleMobileMenu={handleMobileMenu} mobileMenu={mobileMenu}/>
+      <Header handleMobileMenu={handleMobileMenu} mobileMenu={mobileMenu} />
       <div className={homeStyles.wrapper}>
         <Sidebar />
         <main className={homeStyles.main}>
