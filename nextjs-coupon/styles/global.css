@@ -67,3 +67,15 @@ body{
     height: 315px;
   }
 }
+.fadeIn{
+  transform: translate(0,0) !important;
+}
+.fadeOut{
+  transform: translate(0,-50%)scaleY(0) !important;
+}
+@keyframes fadeIn {
+   to{
+       scale: 1;
+       opacity: 1;
+   }
+}

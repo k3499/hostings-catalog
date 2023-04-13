@@ -1,9 +1,10 @@
 import styles from "./header.module.css";
 import { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import MobileMenu from "../mobileMenu/mobileMenu";
+import Menu from "../menu/menu";
 
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false)
@@ -17,30 +18,25 @@ export default function Header() {
     const mobileMenuBlock = document.querySelector('#mobileMenu');
 
     if (mobileMenu){
-      mobileMenuBlock.style.display = 'none';
       setMobileMenu(false);
-      console.log(mobileMenu)
-    //   setTimeout(() => {
-    //     swiperBlock.style.display = 'block'
-    //     spoiler.style.display = 'none'
-    //     slider.style.height = '33px';
-    // }, 550);
-    // spoilerStatus = 0;
-    // spoiler.classList.remove('fadeIn');
-    // spoiler.classList.add('fadeOut');
+
+      setTimeout(() => {
+        mobileMenuBlock.style.display = 'none';
+      }, 250);
+
+      mobileMenuBlock.classList.remove('fadeIn');
+      mobileMenuBlock.classList.add('fadeOut');
   }else{
-    mobileMenuBlock.style.display = 'block';
-    setMobileMenu(true);
-    console.log(mobileMenu)
-    // swiperBlock.style.display = 'none';
-    //   spoiler.style.display = 'block';
-    //   setTimeout(() => {
-    //       slider.style.height = 'auto';
-    //       spoiler.classList.remove('fadeOut');
-    //       spoiler.classList.add('fadeIn');
-    //   }, 50);
-    //   spoiler.style.height = 'fit-content';
-    //   spoilerStatus = 1;
+      mobileMenuBlock.style.display = 'block';
+      mobileMenuBlock.style.height = 'fit-content';
+
+      setMobileMenu(true);
+
+      setTimeout(() => {
+          mobileMenuBlock.classList.remove('fadeOut');
+          mobileMenuBlock.classList.add('fadeIn');
+      }, 50);
+
   }
   }
   return (
@@ -59,15 +55,21 @@ export default function Header() {
             className={styles.header__burger}
             id="header__burger"
           >
-            {" "}
-            <FontAwesomeIcon
+            {mobileMenu 
+            ? <FontAwesomeIcon
               style={{ fontSize: "32px" }}
-              icon={faBars}
-            ></FontAwesomeIcon>
+              icon={faXmark}
+            ></FontAwesomeIcon> 
+            : <FontAwesomeIcon 
+            icon={faBars} 
+            style={{ fontSize: "32px" }} 
+          ></FontAwesomeIcon>}
           </a>
         </nav>
       </div>
-      <div className={styles.header__mobileMenu} id="mobileMenu">222</div>
+      <div className={styles.header__mobileMenu} id="mobileMenu">
+        <Menu/>
+      </div>
     </header>
   )
 }

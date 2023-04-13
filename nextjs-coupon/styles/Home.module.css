@@ -18,6 +18,9 @@
 }
 @media (max-width: 925px) {
   .wrapper {
-    padding: 75px 20px 20px 0;
+    padding: 75px 20px;
+  }
+  .main {
+    width: 100%;
   }
 }
