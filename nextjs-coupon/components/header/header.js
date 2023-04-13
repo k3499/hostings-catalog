@@ -46,7 +46,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__wrapper}>
-        <Link className={styles.logo} href="/" onClick={handleMobileMenuClick}>
+        <Link className={styles.logo} href="/">
           Promokoders
         </Link>
         <nav className={styles.header__topMenu}>
