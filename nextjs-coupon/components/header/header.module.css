@@ -35,17 +35,16 @@
   align-items: center;
   gap: 20px;
 }
-.header__mobileMenu {
-  background: #fff;
+/*mobile menu*/
+.header__mobileMenu{
+  background: var(--bgmain);
   height: 0;
-  transform: translate(0, -50%) scaleY(0);
-  transition: 0.3s;
+  transform: translate(0,-50%)scaleY(0);
+  transition: 0.25s;
   width: 100%;
   margin-bottom: 13px;
 }
-.header__mobileMenuWrapper {
-  height: 200px;
-}
+
 @media (max-width: 925px) {
   .header {
     position: fixed;

@@ -38,21 +38,6 @@ export default function SingleHead() {
               fill
             />
           </SwiperSlide>
-          <SwiperSlide>
-            <div className={styles.main__banner}>
-              <div className={styles.main__wrapper}>
-                <p className={styles.main__subtitle}>
-                  Промокод на баланс на одном из лучших Crash сайтов
-                </p>
-                <div className={styles.main__codeWrapper}>
-                  <a className={styles.main__link} href="/" target="_blank">
-                    Получить Бонус
-                  </a>
-                </div>
-              </div>
-              <div className={styles.main__bannerKerambitBg}></div>
-            </div>
-          </SwiperSlide>
         </Swiper>
       </div>
       <div className={styles.singleHead__codeWrap}>

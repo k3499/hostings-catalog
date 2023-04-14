@@ -1,9 +1,10 @@
 import styles from "./header.module.css"
 import { useState, useEffect } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-import Link from "next/link"
-import MobileMenu from "../mobileMenu/mobileMenu"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
+import MobileMenu from "../mobileMenu/mobileMenu";
+import Menu from "../menu/menu";
 
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false)
@@ -16,33 +17,33 @@ export default function Header() {
     const burgerLink = document.querySelector("#header__burger")
     const mobileMenuBlock = document.querySelector("#mobileMenu")
 
-    if (mobileMenu) {
-      //mobileMenuBlock.style.display = "none"
-      setMobileMenu(false)
-      console.log(mobileMenu)
+    if (mobileMenu){
+      setMobileMenu(false);
+
       setTimeout(() => {
-        mobileMenuBlock.style.display = "none"
-      }, 550)
-      //spoilerStatus = 0;
-      mobileMenuBlock.classList.remove("fadeIn")
-      mobileMenuBlock.classList.add("fadeOut")
-    } else {
-      mobileMenuBlock.style.display = "block"
-      setMobileMenu(true)
-      console.log(mobileMenu)
+        mobileMenuBlock.style.display = 'none';
+      }, 250);
+
+      mobileMenuBlock.classList.remove('fadeIn');
+      mobileMenuBlock.classList.add('fadeOut');
+  }else{
+      mobileMenuBlock.style.display = 'block';
+      mobileMenuBlock.style.height = 'fit-content';
+
+      setMobileMenu(true);
+
       setTimeout(() => {
-        mobileMenuBlock.classList.remove("fadeOut")
-        mobileMenuBlock.classList.add("fadeIn")
-      }, 50)
-      mobileMenuBlock.style.height = "fit-content"
-      //spoilerStatus = 1;
-    }
+          mobileMenuBlock.classList.remove('fadeOut');
+          mobileMenuBlock.classList.add('fadeIn');
+      }, 50);
+
+  }
   }
   return (
     <header className={styles.header}>
       <div className={styles.header__wrapper}>
-        <Link className={styles.logo} href="/" onClick={handleMobileMenuClick}>
-          PrKDR
+        <Link className={styles.logo} href="/">
+          Promokoders
         </Link>
         <nav className={styles.header__topMenu}>
           <a href="#" className={styles.button}>
@@ -54,16 +55,20 @@ export default function Header() {
             className={styles.header__burger}
             id="header__burger"
           >
-            {" "}
-            <FontAwesomeIcon
+            {mobileMenu 
+            ? <FontAwesomeIcon
               style={{ fontSize: "32px" }}
-              icon={faBars}
-            ></FontAwesomeIcon>
+              icon={faXmark}
+            ></FontAwesomeIcon> 
+            : <FontAwesomeIcon 
+            icon={faBars} 
+            style={{ fontSize: "32px" }} 
+          ></FontAwesomeIcon>}
           </a>
         </nav>
       </div>
       <div className={styles.header__mobileMenu} id="mobileMenu">
-        <div className={styles.header__mobileMenuWrapper}>aafafaf</div>
+        <Menu/>
       </div>
     </header>
   )
