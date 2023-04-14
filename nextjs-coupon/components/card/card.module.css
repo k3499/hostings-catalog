@@ -1,20 +1,4 @@
-.header__wrapper{
-    width: 1200px;
-    box-sizing: border-box;
-    padding: 15px 20px;
-    margin: 0 auto;
-    background: var(--bgmain);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo{
-    color: #23D1A4;
-    text-decoration: none;
-    font-size: 2rem;
-}
-.popular__card{
+.card__wrap{
     position: relative;
     width: calc(33.333% - 20px);
     min-height: 287px;
@@ -24,7 +8,7 @@
     box-sizing: border-box;
     padding: 13px;
 }
-.popular__money{
+.card__money{
     position: absolute;
     top: -9px;
     left: -11px;
@@ -35,35 +19,35 @@
     z-index: 0;
     border-radius: 5px 5px 0 5px;
 }
-.popular__info{
+.card__info{
     position: absolute;
     color: #5B5B67;
     right: 18px;
     top: 22px;
     cursor: help;
 }
-.popular__cardImgContainer{
+.card__imgContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-.popular__cardLink{
+.card__link{
     margin-top: 5px;
 }
-.popular__cardImg{
+.card__img{
     height: 100%;
     max-width: 100%;
     border: 1px solid #31303e;
     box-sizing: border-box;
 }
-.popular__cardTitle{
+.card__title{
     padding: 0 20px 0 0;
     margin: 8px 0 15px;
     font-weight: normal;
     font-size: 1rem;
 }
-.popular__promoCodeWrap{
+.card__promoCodeWrap{
     position: relative;
     background: #2D2C3A;
     border: 1px solid #31313D;
@@ -71,7 +55,7 @@
     color: #9997b3;
     border-radius: 7px;
 }
-.popular__promoCode{
+.card__promoCode{
     background: #2D2C3A;
     padding: 10px;
     font-size: 1.2rem;
@@ -80,10 +64,11 @@
     border: 0;
     width: calc(100% - 43px);
 }
-.popular__promoCopy{
+.card__promoCopy{
     -webkit-font-smoothing: antialiased;
     background: var(--lime);
-    -webkit-text-fill-color: #37363e;
+    -webkit-text-fill-color: #8f8e99;
+    color: #2d2c3a;
     position: absolute;
     right: 0;
     top: 0;
@@ -91,30 +76,34 @@
     outline: none;
     border: 0;
     width: 43px;
-    border-radius: 10px;
     border-radius: 7px;
     cursor: pointer;
 }
-.popular__promoSiteLink{
+.card__promoSiteLink{
     display: block;
     width: 100%;
     box-sizing: border-box;
     text-align: center;
     margin-top: 14px;
 }
-
+.buttonYellow_active{
+    background: #e7f79c;
+    border: 2px solid #d8ff20;
+    box-sizing: border-box;
+    /* color: #1c0de3; */
+}
 @media (max-width: 1199px) {
-    .popular__cardTitle{
+    .card__title{
         text-align: center;
         font-size: 1.1rem;
         padding: 0;
     }
-    .popular__cardTitle span{
+    .card__title span{
         display: block;
     }
 }
 @media (max-width: 1030px) {
-    .popular__card{
+    .card__wrap{
         width: calc(50% - 20px);
         min-height: 287px;
         background: var(--bgcard);

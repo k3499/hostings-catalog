@@ -62,23 +62,7 @@ body {
   height: 100%;
   z-index: 0;
 }
-.buttonYellow_active{
-  background: #e7f79c !important;
-  border: 2px solid #d8ff20 !important;
-  box-sizing: border-box;
-}
-.fadeIn {
-  transform: translate(0, 0);
-}
-.fadeOut {
-  transform: translate(0, -50%) scaleY(0);
-}
-@keyframes fadeIn {
-  to {
-    scale: 1;
-    opacity: 1;
-  }
-}
+
 
 @media (max-width: 1099px) {
   .swiper {

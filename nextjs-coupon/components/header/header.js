@@ -7,16 +7,12 @@ import MobileMenu from "../mobileMenu/mobileMenu";
 import Menu from "../menu/menu";
 
 export default function Header() {
-  const [mobileMenu, setMobileMenu] = useState(false)
-  // const spoilerLink = document.querySelector('.spoiler__link');
-  // const spoiler = document.querySelector('.spoiler');
-  // const swiperBlock = document.querySelector('.slider__wrapper');
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   function handleMobileMenuClick(e) {
     e.preventDefault()
-    const burgerLink = document.querySelector("#header__burger")
-    const mobileMenuBlock = document.querySelector("#mobileMenu")
-
+    const mobileMenuBlock = document.querySelector("#mobileMenu");
+    
     if (mobileMenu){
       setMobileMenu(false);
 
@@ -24,8 +20,8 @@ export default function Header() {
         mobileMenuBlock.style.display = 'none';
       }, 250);
 
-      mobileMenuBlock.classList.remove('fadeIn');
-      mobileMenuBlock.classList.add('fadeOut');
+      mobileMenuBlock.classList.remove(styles.fadeIn);
+      mobileMenuBlock.classList.add(styles.fadeOut);
   }else{
       mobileMenuBlock.style.display = 'block';
       mobileMenuBlock.style.height = 'fit-content';
@@ -33,8 +29,8 @@ export default function Header() {
       setMobileMenu(true);
 
       setTimeout(() => {
-          mobileMenuBlock.classList.remove('fadeOut');
-          mobileMenuBlock.classList.add('fadeIn');
+          mobileMenuBlock.classList.remove(styles.fadeOut);
+          mobileMenuBlock.classList.add(styles.fadeIn);
       }, 50);
 
   }

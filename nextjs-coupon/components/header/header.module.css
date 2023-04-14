@@ -37,6 +37,7 @@
 }
 /*mobile menu*/
 .header__mobileMenu{
+  display: none;
   background: var(--bgmain);
   height: 0;
   transform: translate(0,-50%)scaleY(0);
@@ -44,7 +45,18 @@
   width: 100%;
   margin-bottom: 13px;
 }
-
+.fadeIn {
+  transform: translate(0, 0);
+}
+.fadeOut {
+  transform: translate(0, -50%) scaleY(0);
+}
+@keyframes fadeIn {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
 @media (max-width: 925px) {
   .header {
     position: fixed;
