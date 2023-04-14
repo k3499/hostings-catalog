@@ -63,15 +63,22 @@
     font-weight: normal;
     font-size: 1rem;
 }
-.popular__promoCode{
+.popular__promoCodeWrap{
     position: relative;
     background: #2D2C3A;
     border: 1px solid #31313D;
-    padding: 10px;
-    font-size: 1.2rem;
     margin-top: 10px;
     color: #9997b3;
     border-radius: 7px;
+}
+.popular__promoCode{
+    background: #2D2C3A;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #9997b3;
+    outline: none;
+    border: 0;
+    width: calc(100% - 43px);
 }
 .popular__promoCopy{
     -webkit-font-smoothing: antialiased;
@@ -95,6 +102,7 @@
     text-align: center;
     margin-top: 14px;
 }
+
 @media (max-width: 1199px) {
     .popular__cardTitle{
         text-align: center;
