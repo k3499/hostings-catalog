@@ -70,3 +70,8 @@ body {
   }
 }
 
+ @media (max-width: 494px){
+  .swiper {
+      height: 244px;
+  }
+} 

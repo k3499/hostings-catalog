@@ -16,3 +16,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+@media (max-width: 540px){
+    .popular__wrapper{
+        flex-direction: column; 
+    }
+}

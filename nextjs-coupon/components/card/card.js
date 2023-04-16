@@ -8,6 +8,7 @@ import logoFail from "/public/images/promokod-csfail.jpg"
 import {useRef, useState} from 'react';
 
 export default function Card({site}) {
+    console.log(site);
     const inputRef = useRef(null);
     const [copyingStatus, setCopyingStatus] = useState(false)
 
@@ -51,7 +52,7 @@ export default function Card({site}) {
             <h2 className={styles.card__title}><span>Промокод</span> {site.title}</h2>
             <div>
                 <div className={styles.card__promoCodeWrap}>
-                    <input className={styles.card__promoCode} type="text" value="DATAGAME" readOnly ref={inputRef}/>
+                    <input className={styles.card__promoCode} type="text" value={site.title} readOnly ref={inputRef}/>
                     <button className={styles.card__promoCopy}  onClick={copyToClipboard}>
                         {copyingStatus 
                         ?<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCheck}></FontAwesomeIcon>

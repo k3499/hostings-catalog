@@ -39,7 +39,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.header__wrapper}>
         <Link className={styles.logo} href="/">
-          Promokoders
+          Be Skin
         </Link>
         <nav className={styles.header__topMenu}>
           <a href="#" className={styles.button}>

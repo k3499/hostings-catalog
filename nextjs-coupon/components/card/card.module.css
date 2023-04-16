@@ -113,3 +113,18 @@
         padding: 13px;
     }
 }
+@media (max-width: 685px){
+    .card__promoCode{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 560px){
+    .card__promoCode{
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 540px){
+    .card__wrap{
+        width: 100%;
+    }
+}

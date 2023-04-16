@@ -80,4 +80,96 @@
     .main__banner{
         min-height: 270px;
     }
+    .swiper {
+        height: 304px;
+    }
+}
+@media (max-width: 705px) {
+    .main__title{
+        font-size: 2.8rem;
+    }
+    .main__secondTitle{
+        font-size: 1.6rem;
+    }
+    .main__link{
+        padding: 10px 10px;
+        margin-top: 20px;
+    }
+    .main__subtitle{
+        font-size: 0.90rem;
+        max-width: 193px;
+    }
+    .main__banner{
+        padding: 20px 25px;
+        min-height: 235px;
+    }
+    .swiper {
+        height: 288px;
+    }
+}
+@media (max-width: 610px) {
+    .main__bannerKerambitBg{
+        width: 325px;
+        height: 293px;
+        top: -23px;
+    }
+}
+@media (max-width: 585px) {
+    .main__bannerKerambitBg{
+        width: 233px;
+        height: 293px;
+        top: 22px;
+    }
+}
+@media (max-width: 495px) {
+    .main__bannerKerambitBg{
+        width: 180px;
+        height: 161px;
+        top: 23px;
+    }
+    .main__title{
+        font-size: 2.3rem;
+    }
+    .main__secondTitle{
+        font-size: 1.3rem;
+    }
+    .main__link{
+        padding: 8px 10px;
+        margin-top: 20px;
+        font-size: 0.9rem;
+    }
+    .main__subtitle{
+        font-size: 0.85rem;
+        max-width: 180px;
+    }
+    .main__banner{
+        padding: 14px 25px;
+        min-height: 200px;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 405px) {
+    .main__bannerKerambitBg{
+        width: 149px;
+        height: 130px;
+    } 
+}
+@media (max-width: 404px) {
+    .main__bannerKerambitBg{
+        display: none;
+    } 
+    .main__subtitle{
+        font-size: 0.85rem;
+        max-width: 100%;
+    }
+    .main__link{
+        padding: 10px 20px;
+    }
+    .main__wrapper{
+        text-align: center;
+    }
+    .main__codeWrapper{
+        display: flex;
+        justify-content: center;
+    }
 }

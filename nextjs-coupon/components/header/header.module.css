@@ -10,9 +10,13 @@
   justify-content: space-between;
 }
 .logo {
-  color: #23d1a4;
   text-decoration: none;
-  font-size: 2rem;
+  background: url(/images/logo-width.png) no-repeat;
+  background-size: contain;
+  text-indent: -999999999px;
+  overflow: hidden;
+  height: 37px;
+  width: 300px;
 }
 .button {
   background: linear-gradient(45deg, var(--purple) 20%, var(--blue) 100%);
@@ -44,6 +48,7 @@
   transition: 0.25s;
   width: 100%;
   margin-bottom: 13px;
+  padding: 10px 20px;
 }
 .fadeIn {
   transform: translate(0, 0);
@@ -65,5 +70,13 @@
   }
   .header__burger {
     display: block;
+  }
+}
+@media (max-width: 625px) {
+  .logo {
+    background: url(/images/logo.png) no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 40px;
   }
 }
