@@ -1,0 +1,9 @@
+.footerWrapper{
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    margin: 0 auto;
+    background: var(--bgmain);
+    color: #706f87;
+    font-size: 0.9rem;
+}
