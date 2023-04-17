@@ -10,11 +10,11 @@ import scrin from "/public/images/csgofail.jpg"
 import "swiper/css"
 import "swiper/css/a11y"
 import "swiper/css/autoplay"
-import logoFail from "/public/images/promokod-csfail.jpg"
 
 const russo = Russo_One({ subsets: ['latin', 'cyrillic'], weight: "400", })
 
-export default function SingleHead() {
+export default function SingleHead({ slides, siteName, promocode, money, link }) {
+  console.log(slides)
   const swiperParameters = {
     modules: [A11y, Autoplay],
     loop: true,

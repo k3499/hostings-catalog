@@ -58,6 +58,10 @@
       "type": "integer",
       "required": true,
       "unique": false
+    },
+    "description": {
+      "type": "text",
+      "required": true
     }
   }
 }

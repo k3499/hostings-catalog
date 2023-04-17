@@ -8,12 +8,11 @@ import logoFail from "/public/images/promokod-csfail.jpg"
 import {useRef, useState} from 'react';
 
 export default function Card({site}) {
+    console.log(site)
     const inputRef = useRef(null);
     const [copyingStatus, setCopyingStatus] = useState(false)
 
     const copyToClipboard = (evt) => {
-        console.log(evt.currentTarget.classList);
-
         const copyButton = evt.currentTarget;
         let textToCopy = inputRef.current.value;
         navigator.clipboard.writeText(textToCopy)
@@ -33,12 +32,12 @@ export default function Card({site}) {
 
     return (
         <article className={styles.card__wrap}>
-            <div className={styles.card__money}>0.50$</div>
+            <div className={styles.card__money}>{site.money}</div>
             <a className={styles.card__info}>
                 <FontAwesomeIcon style={{fontSize:"15px"}} icon={faCircleInfo}></FontAwesomeIcon>
             </a>
             <div className={styles.card__imgContainer}>
-                <Link href="/csfail-promokody-na-popolnenie" className={styles.card__link}>
+                <Link href="/csfail-promokod-na-popolnenie" className={styles.card__link}>
                     <Image
                         className={styles.card__img}
                         loading="lazy"
@@ -48,7 +47,7 @@ export default function Card({site}) {
                     />
                 </Link>
             </div>
-            <h2 className={styles.card__title}><span>Промокод</span> {site.title}</h2>
+            <h2 className={styles.card__title}><span>Промокод</span> {site.promocode}</h2>
             <div>
                 <div className={styles.card__promoCodeWrap}>
                     <input className={styles.card__promoCode} type="text" value={site.title} readOnly ref={inputRef}/>
@@ -60,7 +59,7 @@ export default function Card({site}) {
                     </button>
                 </div>    
             </div>
-            <a href="#" target="_blank" className={`${utils.button} ${styles.card__promoSiteLink}`}>Получить</a>
+            <a href={site.link} target="_blank" className={`${utils.button} ${styles.card__promoSiteLink}`}>Получить</a>
         </article>
     );
 }

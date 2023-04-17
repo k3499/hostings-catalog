@@ -8,10 +8,13 @@ import homeStyles from "../styles/Home.module.css"
 import Footer from '../components/footer/footer'
 
 function Home({ title, description, page_description, siteList, mobileMenu, handleMobileMenu }) {
-  console.log( siteList )
+  console.log(siteList)
   return (
     <>
       <Head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name='title' content={title} />
         <meta name='description' content={description} />
         <title>{title}</title>
@@ -21,7 +24,7 @@ function Home({ title, description, page_description, siteList, mobileMenu, hand
         <Sidebar />
         <main className={homeStyles.main}>
           <MainBanner />
-          <Popular  />
+          <Popular siteList={siteList}/>
         </main>
       </div>
       <Footer description={page_description}/>
