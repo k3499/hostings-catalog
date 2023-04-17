@@ -8,7 +8,6 @@ import logoFail from "/public/images/promokod-csfail.jpg"
 import {useRef, useState} from 'react';
 
 export default function Card({site}) {
-    console.log(site);
     const inputRef = useRef(null);
     const [copyingStatus, setCopyingStatus] = useState(false)
 

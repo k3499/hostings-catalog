@@ -7,8 +7,8 @@ import Popular from "../components/popular/popular"
 import homeStyles from "../styles/Home.module.css"
 import Footer from '../components/footer/footer'
 
-function Home({ title, description, page_description, mobileMenu, handleMobileMenu }) {
-  console.log(page_description)
+function Home({ title, description, page_description, siteList, mobileMenu, handleMobileMenu }) {
+  console.log( siteList )
   return (
     <>
       <Head>
@@ -29,15 +29,35 @@ function Home({ title, description, page_description, mobileMenu, handleMobileMe
   )
 }
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
+//   try {
+//       const res = await axios.get('http://127.0.0.1:1337/api/homepage');
+      
+//       const homePage = res.data.data.attributes;
+//       return { props:{ ...homePage }};
+//     } catch (error) {
+//       return { error };
+//     }
+// }
+export async function getStaticProps(context) {
   try {
-      const res = await axios.get('http://127.0.0.1:1337/api/homepage');
-      const homePage = res.data.data.attributes;
-      return { props:{ ...homePage }};
+    const res = await axios.all([
+        axios.get('http://127.0.0.1:1337/api/homepage'), 
+        axios.get('http://127.0.0.1:1337/api/sites-lists')
+      ])
+      .then(axios.spread((obj1, obj2) => {
+        const homePage = obj1.data.data.attributes;
+        const siteList = obj2.data.data;
+        return {homePage, siteList} 
+        })
+      );
+      const homePage = res.homePage;
+      const siteList = res.siteList;
+      return { props: { ...homePage, siteList }};
     } catch (error) {
-      return { error };
-    }
-}
+       return { props: { ...error } };
+      }
 
+}
 
 export default Home;
