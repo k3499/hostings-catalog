@@ -1,4 +1,5 @@
 import Head from "next/head"
+import axios from 'axios'
 import Header from "../components/header/header"
 import Sidebar from "../components/sidebar/sidebar"
 import SingleHead from "../components/singleHead/singlehead"
@@ -6,7 +7,7 @@ import SingleBody from "../components/singleBody/singleBody"
 import Footer from "../components/footer/footer"
 import homeStyles from "../styles/Home.module.css"
 
-export default function csfail({
+function Csfail({
   title,
   description,
   siteName,
@@ -15,7 +16,10 @@ export default function csfail({
   money,
   text,
   slides,
+  error
 }) {
+  
+  console.log(title)
   return (
     <>
       <Head>
@@ -37,7 +41,7 @@ export default function csfail({
             money={money}
             link={link}
           />
-          <SingleBody title={title} text={text} logo={logo} />
+          <SingleBody title={title} text={text} />
         </main>
       </div>
       <Footer />
@@ -47,11 +51,17 @@ export default function csfail({
 
 export async function getStaticProps() {
   try {
-    const res = await axios.get("http://localhost:1337/api/sites-lists/1")
-
-    const site = res.data.data.attributes
+    const res = await axios.get("http://127.0.0.1:1337/api/sites-lists?filters[slug][$eq]=csfail-promokod-na-popolnenie")
+    .then((res) => {
+      const singlePage = res.data.data[0].attributes;
+      return { singlePage };
+    });
+    const site = res.singlePage;
     return { props: { ...site } }
   } catch (error) {
-    return { error }
+    return { props: { ...error } }
   }
 }
+
+
+export default Csfail;

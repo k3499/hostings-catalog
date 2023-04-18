@@ -8,7 +8,6 @@ import logoFail from "/public/images/promokod-csfail.jpg"
 import {useRef, useState} from 'react';
 
 export default function Card({site}) {
-    console.log(site)
     const inputRef = useRef(null);
     const [copyingStatus, setCopyingStatus] = useState(false)
 
@@ -37,7 +36,7 @@ export default function Card({site}) {
                 <FontAwesomeIcon style={{fontSize:"15px"}} icon={faCircleInfo}></FontAwesomeIcon>
             </a>
             <div className={styles.card__imgContainer}>
-                <Link href="/csfail-promokod-na-popolnenie" className={styles.card__link}>
+                <Link href={`/` + site.slug} className={styles.card__link}>
                     <Image
                         className={styles.card__img}
                         loading="lazy"
@@ -47,10 +46,10 @@ export default function Card({site}) {
                     />
                 </Link>
             </div>
-            <h2 className={styles.card__title}><span>Промокод</span> {site.promocode}</h2>
+            <h2 className={styles.card__title}><span>Промокод</span> {site.siteName}</h2>
             <div>
                 <div className={styles.card__promoCodeWrap}>
-                    <input className={styles.card__promoCode} type="text" value={site.title} readOnly ref={inputRef}/>
+                    <input className={styles.card__promoCode} type="text" value={site.promocode} readOnly ref={inputRef}/>
                     <button className={styles.card__promoCopy}  onClick={copyToClipboard}>
                         {copyingStatus 
                         ?<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCheck}></FontAwesomeIcon>

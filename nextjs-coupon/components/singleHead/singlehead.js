@@ -13,8 +13,14 @@ import "swiper/css/autoplay"
 
 const russo = Russo_One({ subsets: ['latin', 'cyrillic'], weight: "400", })
 
-export default function SingleHead({ slides, siteName, promocode, money, link }) {
-  console.log(slides)
+export default function SingleHead({ 
+  slides, 
+  siteName, 
+  promocode, 
+  money, 
+  link 
+}) {
+  //console.log(siteName)
   const swiperParameters = {
     modules: [A11y, Autoplay],
     loop: true,
@@ -51,9 +57,9 @@ export default function SingleHead({ slides, siteName, promocode, money, link })
             width={206}
           />
         </div> */}
-        <p className={`${styles.singleHead__title} ${russo.className}`}>CSGOPOLYGON</p>
+        <p className={`${styles.singleHead__title} ${russo.className}`}>{siteName}</p>
         <div className={styles.singleHead__code}>
-          DATAGAME
+          {promocode}
           <button className={styles.singleHead__promoCopy}>
             <FontAwesomeIcon
               style={{ fontSize: "20px" }}
@@ -61,9 +67,9 @@ export default function SingleHead({ slides, siteName, promocode, money, link })
             ></FontAwesomeIcon>
           </button>
         </div>
-        <p className={styles.singleHead__money}>$0.50</p>
+        <p className={styles.singleHead__money}>{money}</p>
         <a
-          href=""
+          href={link}
           target="_blank"
           className={`${styles.singleHead__link} ${utils.button}`}
         >

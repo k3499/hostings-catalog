@@ -5,7 +5,8 @@ import Footer from "../components/footer/footer"
 import homeStyles from "../styles/Home.module.css"
 import styles from "../styles/catStyle.module.css"
 import Card from "../components/card/card"
-export default function crash() {
+
+function Сrash() {
   return (
     <>
       <Head>
@@ -21,13 +22,27 @@ export default function crash() {
           <h1 className={styles.category__title}>Список</h1>
           <div className={styles.category__hr}></div>
           <div className={styles.category__wrapper}>
-            {Object.keys(sites).map((sitesId) => (
+            {/* {Object.keys(sites).map((sitesId) => (
               <Card key={sitesId} site={sites[sitesId]} />
-            ))}
+            ))} */}
           </div>
         </main>
       </div>
-      <Footer description={page_description} />
+      <Footer />
     </>
   )
 }
+
+export async function getStaticProps() {
+  try {
+    const res = await axios.get("http://127.0.0.1:1337/api/sites-lists/1");
+    const site = res.data;
+    console.log(site)
+    return { props: { ...site } }
+  } catch (error) {
+    return { props: { ...error } }
+  }
+}
+
+
+export default Сrash;
