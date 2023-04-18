@@ -1,5 +1,6 @@
 import Head from "next/head"
 import axios from 'axios'
+import { serialize } from 'next-mdx-remote/serialize';
 import Header from "../components/header/header"
 import Sidebar from "../components/sidebar/sidebar"
 import SingleHead from "../components/singleHead/singlehead"
@@ -14,7 +15,7 @@ function Csfail({
   link,
   promocode,
   money,
-  text,
+  pageText,
   slides,
   error
 }) {
@@ -41,7 +42,7 @@ function Csfail({
             money={money}
             link={link}
           />
-          <SingleBody title={title} text={text} />
+          <SingleBody title={title} pageText={pageText} />
         </main>
       </div>
       <Footer />
@@ -57,7 +58,11 @@ export async function getStaticProps() {
       return { singlePage };
     });
     const site = res.singlePage;
-    return { props: { ...site } }
+    const pageTextMDX = site.text;
+    //сериализация markdown
+    const pageText = await serialize(pageTextMDX);
+    console.log(pageText)
+    return { props: { ...site , pageText } }
   } catch (error) {
     return { props: { ...error } }
   }
