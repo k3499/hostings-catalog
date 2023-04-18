@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "page_description": {
+      "type": "richtext",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "sites_lists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sites-list.sites-list",
+      "mappedBy": "categories"
+    }
+  }
+}

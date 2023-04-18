@@ -62,6 +62,12 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "sites_lists"
     }
   }
 }
