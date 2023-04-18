@@ -4,9 +4,10 @@ import Sidebar from "../components/sidebar/sidebar"
 import Footer from "../components/footer/footer"
 import homeStyles from "../styles/Home.module.css"
 import styles from "../styles/catStyle.module.css"
+import CatHead from "../components/cathead/cathead"
 import Card from "../components/card/card"
 
-function Сrash() {
+function Crash() {
   return (
     <>
       <Head>
@@ -19,6 +20,7 @@ function Сrash() {
       <div className={homeStyles.wrapper}>
         <Sidebar />
         <main className={homeStyles.main}>
+          <CatHead />
           <h1 className={styles.category__title}>Список</h1>
           <div className={styles.category__hr}></div>
           <div className={styles.category__wrapper}>
@@ -45,4 +47,4 @@ export async function getStaticProps() {
 }
 
 
-export default Сrash;
+export default Crash;
