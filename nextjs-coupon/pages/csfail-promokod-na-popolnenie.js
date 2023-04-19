@@ -19,8 +19,7 @@ function Csfail({
   slides,
   error
 }) {
-  
-  console.log(title)
+
   return (
     <>
       <Head>
@@ -61,7 +60,6 @@ export async function getStaticProps() {
     const pageTextMDX = site.text;
     //сериализация markdown
     const pageText = await serialize(pageTextMDX);
-    console.log(pageText)
     return { props: { ...site , pageText } }
   } catch (error) {
     return { props: { ...error } }

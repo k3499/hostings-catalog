@@ -10,15 +10,6 @@ export default function SingleHead({ title, pageText }) {
       <h1 className={styles.singleBody__title}>{title}</h1>
       <div className={`${styles.singleBody__text}  ${open.className}`}>
           <MDXRemote {...pageText}  />
-        {/* <figure class = "frog">
-          <Image
-            className={styles.swiperSlideImage}
-            loading="lazy"
-            src={scrin}
-            placeholder="blur"
-          />
-          <figcaption>Промокод кс го феил</figcaption>
-        </figure> */}
       </div>
     </div>
   )
