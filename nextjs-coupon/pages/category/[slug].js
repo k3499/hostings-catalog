@@ -4,6 +4,8 @@ import Header from "../../components/header/header"
 import Sidebar from "../../components/sidebar/sidebar"
 import Footer from '../../components/footer/footer'
 import homeStyles from "../../styles/Home.module.css"
+import CatHead from '../../components/cathead/catHead'
+import SitesList from '../../components/sitesList/sitesList';
 
 export default function Category({ title, slug, description, page_description, mobileMenu, handleMobileMenu, siteList }){
     return (
@@ -20,7 +22,8 @@ export default function Category({ title, slug, description, page_description, m
         <div className={homeStyles.wrapper}>
             <Sidebar />
             <main className={homeStyles.main}>
-            <sitesList siteList={siteList}/>
+            <CatHead title={title}/>
+            <SitesList siteList={siteList}/>
             </main>
         </div>
         <Footer description={page_description}/>
@@ -62,24 +65,3 @@ export async function getStaticProps(ctx) {
          return { props: { ...error } };
         }
   }
-//   export async function getStaticProps(ctx) {
-//     try {
-//       const res = await axios.all([
-//           axios.get('http://127.0.0.1:1337/api/homepage'), 
-//           axios.get('http://127.0.0.1:1337/api/sites-lists')
-//         ])
-//         .then(axios.spread((obj1, obj2) => {
-//           const homePage = obj1.data.data.attributes;
-//           const siteList = obj2.data.data;
-//           return {homePage, siteList} 
-//           })
-//         );
-//         const { slug } = ctx.params;
-//         console.log(ctx)
-//         const homePage = res.homePage;
-//         const siteList = res.siteList;
-//         return { props: { ...homePage, siteList, slug: slug }};
-//       } catch (error) {
-//          return { props: { ...error } };
-//         }
-//   }

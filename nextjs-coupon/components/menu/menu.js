@@ -8,7 +8,7 @@ export default function Menu() {
       <li className={styles.menu__listItem}>
         <Link
           className={`${styles.menu__link}  ${styles.crashLink} ${styles.crashLinkActive}`}
-          href="/crash-csgo-top-saitov"
+          href="/category/jackpot"
         >
           {" "}
           Краш

@@ -31,7 +31,10 @@ export default function Card({site}) {
 
     return (
         <article className={styles.card__wrap}>
-            <div className={styles.card__money}>{site.money}</div>
+            { site.money 
+            ? <div className={styles.card__money}>{site.money}</div>  
+            : ""
+            }
             <a className={styles.card__info}>
                 <FontAwesomeIcon style={{fontSize:"15px"}} icon={faCircleInfo}></FontAwesomeIcon>
             </a>
@@ -46,17 +49,27 @@ export default function Card({site}) {
                     />
                 </Link>
             </div>
-            <h2 className={styles.card__title}><span>Промокод</span> {site.siteName}</h2>
+            { site.promocode
+            ? <h2 className={styles.card__title}><span>Промокод</span> {site.siteName}</h2>
+            : <h2 className={styles.card__title}> {site.siteName}</h2>
+            }
+            
             <div>
-                <div className={styles.card__promoCodeWrap}>
-                    <input className={styles.card__promoCode} type="text" value={site.promocode} readOnly ref={inputRef}/>
-                    <button className={styles.card__promoCopy}  onClick={copyToClipboard}>
-                        {copyingStatus 
-                        ?<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCheck}></FontAwesomeIcon>
-                        :<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCopy}></FontAwesomeIcon>
-                        }
-                    </button>
-                </div>    
+                { site.promocode
+                ? <>
+                    <div className={styles.card__promoCodeWrap}>
+                        <input className={styles.card__promoCode} type="text" value={site.promocode} readOnly ref={inputRef}/>
+                        <button className={styles.card__promoCopy}  onClick={copyToClipboard}>
+                            {copyingStatus 
+                            ?<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCheck}></FontAwesomeIcon>
+                            :<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCopy}></FontAwesomeIcon>
+                            }
+                        </button>
+                    </div>
+                </>
+                : ""
+                }
+  
             </div>
             <a href={site.link} target="_blank" className={`${utils.button} ${styles.card__promoSiteLink}`}>Получить</a>
         </article>

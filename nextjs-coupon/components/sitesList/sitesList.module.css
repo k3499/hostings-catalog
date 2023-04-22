@@ -1,14 +1,4 @@
-.popular__title{
-    font-size: 1.2rem;
-    margin: 35px 0 10px;
-}
-.popular__hr{
-    height: 1px;
-    background: #464553;
-    border-top: 1px solid #292836;
-    margin-bottom: 25px;
-}
-.popular__wrapper{
+.wrapper{
     display: flex;
     row-gap: 50px;
     column-gap: 30px;
@@ -17,7 +7,7 @@
     justify-content: flex-start;
 }
 @media (max-width: 540px){
-    .popular__wrapper{
+    .wrapper{
         flex-direction: column; 
     }
 }
