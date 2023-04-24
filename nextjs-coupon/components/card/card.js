@@ -67,7 +67,11 @@ export default function Card({site}) {
                         </button>
                     </div>
                 </>
-                : ""
+                :<>
+                    <div className={styles.card__promoCodeWrap}>
+                        <input className={styles.card__promoCode} type="text" value="Код не нужен" readOnly disabled/>
+                    </div>
+                </>
                 }
   
             </div>
