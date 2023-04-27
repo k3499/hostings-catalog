@@ -63,15 +63,15 @@ body {
   z-index: 0;
 }
 
-
 @media (max-width: 1099px) {
   .swiper {
     height: 315px;
   }
 }
 
- @media (max-width: 494px){
+@media (max-width: 494px) {
   .swiper {
-      height: 244px;
+    height: 244px;
+    padding-top: 0 !important;
   }
-} 
+}

@@ -8,7 +8,7 @@ import SingleBody from "../components/singleBody/singleBody"
 import Footer from "../components/footer/footer"
 import homeStyles from "../styles/Home.module.css"
 
-function Csfail({
+function fail({
   title,
   description,
   siteName,
@@ -20,7 +20,6 @@ function Csfail({
   logo,
   error,
 }) {
-  console.log(logo.data)
   return (
     <>
       <Head>
@@ -41,6 +40,7 @@ function Csfail({
             promocode={promocode}
             money={money}
             link={link}
+            logo={logo}
           />
           <SingleBody title={title} pageText={pageText} />
         </main>
@@ -54,7 +54,7 @@ export async function getStaticProps() {
   try {
     const res = await axios
       .get(
-        "http://127.0.0.1:1337/api/sites-lists?filters[slug][$eq]=csfail-promokod-na-popolnenie&populate=*"
+        "http://127.0.0.1:1337/api/sites-lists?filters[slug][$eq]=fail&populate=*"
       )
       .then((res) => {
         const singlePage = res.data.data[0].attributes
@@ -70,4 +70,4 @@ export async function getStaticProps() {
   }
 }
 
-export default Csfail
+export default fail

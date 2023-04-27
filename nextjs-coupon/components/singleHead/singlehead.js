@@ -1,26 +1,28 @@
 import styles from "./singleHead.module.css"
 import utils from "../../styles/utils.module.css"
-import { Russo_One } from 'next/font/google';
+import { Russo_One } from "next/font/google"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCopy } from "@fortawesome/free-solid-svg-icons"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { A11y, Autoplay } from "swiper"
+import { urlBuilder, myLoader } from "../../utils/utils"
 import Image from "next/image"
 import scrin from "/public/images/csgofail.jpg"
 import "swiper/css"
 import "swiper/css/a11y"
 import "swiper/css/autoplay"
 
-const russo = Russo_One({ subsets: ['latin', 'cyrillic'], weight: "400", })
+const russo = Russo_One({ subsets: ["latin", "cyrillic"], weight: "400" })
 
-export default function SingleHead({ 
-  slides, 
-  siteName, 
-  promocode, 
-  money, 
-  link 
+export default function SingleHead({
+  slides,
+  logo,
+  siteName,
+  promocode,
+  money,
+  link,
 }) {
-  //console.log(siteName)
+  console.log(logo.data)
   const swiperParameters = {
     modules: [A11y, Autoplay],
     loop: true,
@@ -35,39 +37,47 @@ export default function SingleHead({
     <div className={styles.singleHead}>
       <div className={styles.singleHead__swiper}>
         <Swiper {...swiperParameters}>
-          <SwiperSlide>
-            <Image
-              className={styles.swiperSlideImage}
-              loading="lazy"
-              src={scrin}
-              placeholder="blur"
-              fill
-            />
-          </SwiperSlide>
+          {slides.data.map((slide) => {
+            console.log(slide)
+            return (
+              <SwiperSlide key={slide.id}>
+                <Image
+                  className={styles.swiperSlideImage}
+                  loading="lazy"
+                  loader={() => urlBuilder(slide)}
+                  src={urlBuilder(slide)}
+                  fill
+                />
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
       </div>
       <div className={styles.singleHead__codeWrap}>
-        {/* <div className={styles.singleHead__cardImgWrap}>
+        <div className={styles.logoContainer}>
           <Image
-            className={styles.singleHead__cardImg}
+            className={styles.logo}
             loading="lazy"
-            src={logoFail}
-            placeholder="blur"
-            alt="csfail промокод"
-            width={206}
+            loader={() => urlBuilder(logo.data)}
+            src={urlBuilder(logo.data)}
+            fill
           />
-        </div> */}
-        <p className={`${styles.singleHead__title} ${russo.className}`}>{siteName}</p>
-        <div className={styles.singleHead__code}>
-          {promocode}
-          <button className={styles.singleHead__promoCopy}>
-            <FontAwesomeIcon
-              style={{ fontSize: "20px" }}
-              icon={faCopy}
-            ></FontAwesomeIcon>
-          </button>
         </div>
-        <p className={styles.singleHead__money}>{money}</p>
+        {/* <p className={`${styles.singleHead__title} ${russo.className}`}>{siteName}</p> */}
+        {promocode ? (
+          <div className={styles.singleHead__code}>
+            {promocode}
+            <button className={styles.singleHead__promoCopy}>
+              <FontAwesomeIcon
+                style={{ fontSize: "20px" }}
+                icon={faCopy}
+              ></FontAwesomeIcon>
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
+        {money ? <p className={styles.singleHead__money}>{money}</p> : ""}
         <a
           href={link}
           target="_blank"
