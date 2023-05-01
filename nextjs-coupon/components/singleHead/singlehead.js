@@ -60,6 +60,7 @@ export default function SingleHead({
             loading="lazy"
             loader={() => urlBuilder(logo.data)}
             src={urlBuilder(logo.data)}
+            alt={siteName + "промокод"}
             fill
           />
         </div>

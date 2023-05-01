@@ -155,4 +155,7 @@
   .logoContainer {
     height: 250px;
   }
+  .logo {
+    border-radius: 8px;
+  }
 }
