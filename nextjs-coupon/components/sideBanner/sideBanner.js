@@ -1,10 +1,10 @@
-import styles from "./sidebar.module.css"
-import Menu from "../menu/menu";
+import styles from "./sideBanner.module.css"
 
-export default function Sidebar() {
+export default function SideBanner() {
   return (
-    <aside className={styles.sidebar}>
-      <Menu/>
-    </aside>
+    <a className={styles.wrapper} target="_blank">
+      <span className={styles.label}>СТАВКИ</span>
+      <div className={styles.icon}></div>
+    </a>
   )
 }
