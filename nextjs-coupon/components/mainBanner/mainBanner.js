@@ -32,7 +32,7 @@ export default function MainBanner() {
                             <a className={styles.main__link} href="/" target='_blank' >Получить Бонус</a>
                         </div>
                     </div>
-                    <div className={styles.main__bannerKerambitBg}></div>
+                    <div className={`${styles.main__bannerImg} ${styles.main__bannerKerambitBg}`}></div>
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -42,7 +42,7 @@ export default function MainBanner() {
                         <p className={`${styles.main__secondTitle} ${russo.className}`}>Бонус 0.05$</p>
                         <p className={styles.main__subtitle}>Промокод на баланс на одном из лучших Crash сайтов</p>
                     </div>
-                    <div className={styles.main__bannerKerambitBg}></div>
+                    <div className={`${styles.main__bannerImg} ${styles.main__bannerAk}`}></div>
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>

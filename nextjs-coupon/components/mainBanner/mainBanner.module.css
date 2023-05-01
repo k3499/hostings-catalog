@@ -32,13 +32,19 @@
   max-width: 280px;
   margin: 10px 0 0;
 }
-.main__bannerKerambitBg {
+.main__bannerImg{
   width: 402px;
   height: 370px;
-  background: url(/images/banner-kerambit.png) no-repeat;
   position: absolute;
   right: 70px;
   top: -36px;
+}
+.main__bannerKerambitBg {
+  background: url(/images/banner-kerambit.png) no-repeat;
+}
+.main__bannerAk{
+  background: url(/images/ak-banner.png) no-repeat;
+  right: 40px;
 }
 .main__codeWrapper {
   display: flex;
@@ -55,7 +61,7 @@
   text-decoration: none;
 }
 @media (max-width: 1199px) {
-  .main__bannerKerambitBg {
+  .main__bannerImg{
     right: 20px;
   }
 }
@@ -70,7 +76,7 @@
     padding: 11px 10px;
     font-size: 1rem;
   }
-  .main__bannerKerambitBg {
+  .main__bannerImg {
     right: 8px;
     background-position-x: 100%;
     background-size: 85%;
@@ -108,21 +114,21 @@
   }
 }
 @media (max-width: 610px) {
-  .main__bannerKerambitBg {
+  .main__bannerImg {
     width: 325px;
     height: 293px;
     top: -23px;
   }
 }
 @media (max-width: 585px) {
-  .main__bannerKerambitBg {
+  .main__bannerImg {
     width: 233px;
     height: 293px;
     top: 22px;
   }
 }
 @media (max-width: 495px) {
-  .main__bannerKerambitBg {
+  .main__bannerImg {
     width: 180px;
     height: 161px;
     top: 23px;
@@ -149,13 +155,13 @@
   }
 }
 @media (max-width: 405px) {
-  .main__bannerKerambitBg {
+  .main__bannerImg {
     width: 149px;
     height: 130px;
   }
 }
 @media (max-width: 404px) {
-  .main__bannerKerambitBg {
+  .main__bannerImg {
     display: none;
   }
   .main__subtitle {
