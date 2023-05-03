@@ -20,7 +20,6 @@ function Csfail({
   logo,
   error,
 }) {
-  console.log(logo.data)
   return (
     <>
       <Head>

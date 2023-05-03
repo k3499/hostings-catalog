@@ -39,7 +39,6 @@ export async function getStaticProps() {
   try {
     const res = await axios.get("http://127.0.0.1:1337/api/sites-lists/1");
     const site = res.data;
-    console.log(site)
     return { props: { ...site } }
   } catch (error) {
     return { props: { ...error } }
