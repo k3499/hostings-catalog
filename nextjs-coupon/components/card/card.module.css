@@ -26,6 +26,9 @@
     top: 22px;
     cursor: help;
 }
+.card__info:hover{
+    color: #d8ff20;
+}
 .card__imgContainer{
     display: flex;
     justify-content: center;
