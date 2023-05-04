@@ -41,6 +41,9 @@ export default function MainBanner() {
                         <p className={`${styles.main__title}  ${russo.className}`}>CSFAIL</p>
                         <p className={`${styles.main__secondTitle} ${russo.className}`}>Бонус 0.05$</p>
                         <p className={styles.main__subtitle}>Промокод на баланс на одном из лучших Crash сайтов</p>
+                        <div className={styles.main__codeWrapper}>
+                            <a className={styles.main__link} href="/" target='_blank' >Получить Бонус</a>
+                        </div>
                     </div>
                     <div className={`${styles.main__bannerImg} ${styles.main__bannerAk}`}></div>
                 </div>
