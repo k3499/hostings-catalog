@@ -4,7 +4,7 @@ import Sidebar from "../components/sidebar/sidebar"
 import Footer from "../components/footer/footer"
 import homeStyles from "../styles/Home.module.css"
 import styles from "../styles/catStyle.module.css"
-import CatHead from "../components/cathead/cathead"
+// import CatHead from "../components/catHead/catHead"
 import Card from "../components/card/card"
 
 function Crash() {
@@ -20,7 +20,7 @@ function Crash() {
       <div className={homeStyles.wrapper}>
         <Sidebar />
         <main className={homeStyles.main}>
-          <CatHead />
+          {/* <CatHead /> */}
           <h1 className={styles.category__title}>Список</h1>
           <div className={styles.category__hr}></div>
           <div className={styles.category__wrapper}>
@@ -39,7 +39,6 @@ export async function getStaticProps() {
   try {
     const res = await axios.get("http://127.0.0.1:1337/api/sites-lists/1");
     const site = res.data;
-    console.log(site)
     return { props: { ...site } }
   } catch (error) {
     return { props: { ...error } }

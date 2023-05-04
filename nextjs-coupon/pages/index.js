@@ -11,7 +11,7 @@ function Home({ title, description, page_description, siteList, mobileMenu, hand
   return (
     <>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name='title' content={title} />
@@ -31,16 +31,6 @@ function Home({ title, description, page_description, siteList, mobileMenu, hand
   )
 }
 
-// export async function getStaticProps() {
-//   try {
-//       const res = await axios.get('http://127.0.0.1:1337/api/homepage');
-      
-//       const homePage = res.data.data.attributes;
-//       return { props:{ ...homePage }};
-//     } catch (error) {
-//       return { error };
-//     }
-// }
 export async function getStaticProps(context) {
   try {
     const res = await axios.all([

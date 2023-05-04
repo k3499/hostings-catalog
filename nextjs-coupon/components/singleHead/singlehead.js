@@ -22,7 +22,6 @@ export default function SingleHead({
   money,
   link,
 }) {
-  console.log(logo.data)
   const swiperParameters = {
     modules: [A11y, Autoplay],
     loop: true,
