@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Russo_One } from 'next/font/google';
-import styles from './catHead.module.css'
+import styles from './cathead.module.css'
 
 const russo = Russo_One({ subsets: ['latin', 'cyrillic'], weight: ['400'], });
 
