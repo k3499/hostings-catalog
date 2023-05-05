@@ -4,7 +4,7 @@ import Header from "../../components/header/header"
 import Sidebar from "../../components/sidebar/sidebar"
 import Footer from '../../components/footer/footer'
 import homeStyles from "../../styles/Home.module.css"
-import CatHead from '../../components/catHead/cathead'
+import CatHead from '../../components/catHead/CatHead'
 import SitesList from '../../components/sitesList/sitesList';
 
 export default function Category({ title, slug, description, page_description, mobileMenu, handleMobileMenu, siteList }){
