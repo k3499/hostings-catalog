@@ -10,3 +10,8 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
+./config/middlewares.js
+module.exports = ({ env }) => [
+    // ...
+    { resolve: './src/middlewares/admin-redirect' },
+];
