@@ -63,6 +63,122 @@ body {
   height: 100%;
   z-index: 0;
 }
+/*category menu*/
+.crashLink::before {
+  content: "";
+  background: url(/images/crash.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+  transition: all 0.2s ease 0s;
+}
+.crashLink:hover::before {
+  background: url(/images/crash-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
+}
+.crashLinkActive::before {
+  background: url(/images/crash-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+}
+.menu__jackpot::before {
+  content: "";
+  background: url(/images/jackpot.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+  transition: all 0.2s ease 0s;
+}
+.menu__jackpotActive::before {
+  background: url(/images/jackpot-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+}
+.menu__jackpot:hover::before {
+  background: url(/images/jackpot-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
+}
+.threeColor::before {
+  content: "";
+  background: url(/images/3color.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+}
+.threeColorActive::before {
+  background: url(/images/3color-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
+}
+.threeColor:hover::before {
+  background: url(/images/3color-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
+}
+.fourColor::before {
+  content: "";
+  background: url(/images/4color.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+}
+.fourColorActive::before {
+  background: url(/images/4color-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
+}
+.fourColor:hover::before {
+  background: url(/images/4color-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
+}
+.box::before {
+  content: "";
+  background: url(/images/box.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+}
+.boxActive::before {
+  background: url(/images/box-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
+}
+.box:hover::before {
+  background: url(/images/box-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
+}
+.slots::before {
+  content: "";
+  background: url(/images/slots.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+}
+.slotsActive::before {
+  background: url(/images/slots-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
+}
+.slots:hover::before {
+  background: url(/images/slots-active.png) no-repeat 50%;
+  transition: all 0.2s ease 0s;
+}
+.sportBet::before {
+  content: "";
+  background: url(/images/sport.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+}
+.sportBetActive::before {
+  background: url(/images/slots-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
+}
+.sportBet:hover::before {
+  background: url(/images/slots-active.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+  transition: all 0.2s ease 0s;
+}
+
 
 @media (max-width: 1099px) {
   .swiper {

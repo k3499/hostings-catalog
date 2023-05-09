@@ -7,7 +7,7 @@ import homeStyles from "../../styles/Home.module.css"
 import CatHead from '../../components/catHead/CatHead'
 import SitesList from '../../components/sitesList/sitesList';
 
-export default function Category({ title, slug, description, page_description, mobileMenu, handleMobileMenu, siteList }){
+export default function Category({ title, slug, description, page_description, mobileMenu, handleMobileMenu, siteList, catList }){
     return (
         <>
         <Head>
@@ -20,7 +20,7 @@ export default function Category({ title, slug, description, page_description, m
         </Head>
         <Header handleMobileMenu={handleMobileMenu} mobileMenu={mobileMenu}/>
         <div className={homeStyles.wrapper}>
-            <Sidebar />
+            <Sidebar slug={slug} catList={catList}/>
             <main className={homeStyles.main}>
             <CatHead title={title}/>
             <SitesList siteList={siteList}/>
@@ -48,19 +48,22 @@ export async function getStaticProps(ctx) {
         const { slug } = ctx.params;
         const res = await axios.all([
           axios.get('http://127.0.0.1:1337/api/categories/?filters[slug][$eq]=' + slug), 
-          axios.get('http://127.0.0.1:1337/api/sites-lists?filters[$and][0][categories][slug][$eq]='+ slug)
+          axios.get('http://127.0.0.1:1337/api/sites-lists?filters[$and][0][categories][slug][$eq]='+ slug),
+          axios.get('http://127.0.0.1:1337/api/categories/')
         ])
-        .then(axios.spread((obj1, obj2) => {
-          const categoryPage = obj1.data.data[0].attributes;
-          const siteList = obj2.data.data;
-          return {categoryPage, siteList} 
+        .then(axios.spread((category, sites, categoryAll) => {
+          const categoryPage = category.data.data[0].attributes;
+          const siteList = sites.data.data;
+          const catList = categoryAll.data.data;
+          return {categoryPage, siteList, catList} 
           })
         );
         
         
         const categoryPage = res.categoryPage;
         const siteList = res.siteList;
-        return { props: { ...categoryPage, siteList, slug }};
+        const catList = res.catList;
+        return { props: { ...categoryPage, siteList, slug, catList }};
       } catch (error) {
          return { props: { ...error } };
         }
