@@ -59,7 +59,6 @@ export async function getStaticProps(ctx) {
           })
         );
         
-        
         const categoryPage = res.categoryPage;
         const siteList = res.siteList;
         const catList = res.catList;

@@ -22,8 +22,7 @@ function Home({ title, description, page_description, siteList, mobileMenu, hand
       <div className={homeStyles.wrapper}>
         <Sidebar />
         <main className={homeStyles.main}>
-          <MainBanner />
-          <Popular siteList={siteList}/>
+          404
         </main>
       </div>
       <Footer description={page_description}/>

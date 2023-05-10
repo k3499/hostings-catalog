@@ -73,115 +73,115 @@ body {
   margin-right: 10px;
   border-radius: 3px;
 }
-.crashLink::before {
+.menu__crash-csgo::before {
   content: "";
   background: url(/images/crash.png) no-repeat 50%;
   width: 19px;
   height: 25px;
   transition: all 0.2s ease 0s;
 }
-.crashLink:hover::before {
+.menu__crash-csgo:hover::before {
   background: url(/images/crash-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.crashLinkActive::before {
+.menu__crash-csgo-active::before {
   background: url(/images/crash-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
 }
-.menu__jackpot::before {
+.menu__jackpot-csgo::before {
   content: "";
   background: url(/images/jackpot.png) no-repeat 50%;
   width: 19px;
   height: 25px;
   transition: all 0.2s ease 0s;
 }
-.menu__jackpotActive::before {
+.menu__jackpot-csgo-active::before {
   background: url(/images/jackpot-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
 }
-.menu__jackpot:hover::before {
+.menu__jackpot-csgo:hover::before {
   background: url(/images/jackpot-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.threeColor::before {
+.menu__krasnoe-chernoe-zelenoe-csgo::before {
   content: "";
   background: url(/images/3color.png) no-repeat 50%;
   width: 19px;
   height: 25px;
 }
-.threeColorActive::before {
+.menu__krasnoe-chernoe-zelenoe-csgo-active::before {
   background: url(/images/3color-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
-.threeColor:hover::before {
+.menu__krasnoe-chernoe-zelenoe-csgo:hover::before {
   background: url(/images/3color-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.fourColor::before {
+.menu__chetyre-czveta::before {
   content: "";
   background: url(/images/4color.png) no-repeat 50%;
   width: 19px;
   height: 25px;
 }
-.fourColorActive::before {
+.menu__chetyre-czveta-active::before {
   background: url(/images/4color-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
-.fourColor:hover::before {
+.menu__chetyre-czveta:hover::before {
   background: url(/images/4color-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.box::before {
+.menu__kejsy-csgo::before {
   content: "";
   background: url(/images/box.png) no-repeat 50%;
   width: 19px;
   height: 25px;
 }
-.boxActive::before {
+.menu__kejsy-csgo-active::before {
   background: url(/images/box-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
-.box:hover::before {
+.menu__kejsy-csgo:hover::before {
   background: url(/images/box-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.slots::before {
+.menu__slots::before {
   content: "";
   background: url(/images/slots.png) no-repeat 50%;
   width: 19px;
   height: 25px;
 }
-.slotsActive::before {
+.menu__slots-active::before {
   background: url(/images/slots-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
-.slots:hover::before {
+.menu__slots:hover::before {
   background: url(/images/slots-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.sportBet::before {
+.menu__stavki-na-sport::before {
   content: "";
   background: url(/images/sport.png) no-repeat 50%;
   width: 19px;
   height: 25px;
 }
-.sportBetActive::before {
+.menu__stavki-na-sport-active::before {
   background: url(/images/slots-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
-.sportBet:hover::before {
+.menu__stavki-na-sport:hover::before {
   background: url(/images/slots-active.png) no-repeat 50%;
   width: 19px;
   height: 25px;
