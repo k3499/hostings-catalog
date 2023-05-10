@@ -153,19 +153,19 @@ body {
   background: url(/images/box-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.menu__slots::before {
+.menu__sloty::before {
   content: "";
   background: url(/images/slots.png) no-repeat 50%;
   width: 19px;
   height: 25px;
 }
-.menu__slots-active::before {
+.menu__sloty-active::before {
   background: url(/images/slots-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
-.menu__slots:hover::before {
+.menu__sloty:hover::before {
   background: url(/images/slots-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
@@ -176,13 +176,49 @@ body {
   height: 25px;
 }
 .menu__stavki-na-sport-active::before {
-  background: url(/images/slots-active.png) no-repeat 50%;
+  background: url(/images/sport-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
 .menu__stavki-na-sport:hover::before {
-  background: url(/images/slots-active.png) no-repeat 50%;
+  background: url(/images/sport-active.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+  transition: all 0.2s ease 0s;
+}
+.menu__obmenniki-skinov-csgo::before {
+  content: "";
+  background: url(/images/obmen.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+}
+.menu__obmenniki-skinov-csgo-active::before {
+  background: url(/images/obmen-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
+}
+.menu__obmenniki-skinov-csgo:hover::before {
+  background: url(/images/obmen-active.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+  transition: all 0.2s ease 0s;
+}
+.menu__kriptovalyutnye-ruletki-i-kazino::before {
+  content: "";
+  background: url(/images/cripto.png) no-repeat 50%;
+  width: 19px;
+  height: 25px;
+}
+.menu__kriptovalyutnye-ruletki-i-kazino-active::before {
+  background: url(/images/cripto-active.png) no-repeat 50%;
+  color: #e3e4f8;
+  -webkit-text-fill-color: #e3e4f8;
+  transition: all 0.2s ease 0s;
+}
+.menu__kriptovalyutnye-ruletki-i-kazino:hover::before {
+  background: url(/images/cripto-active.png) no-repeat 50%;
   width: 19px;
   height: 25px;
   transition: all 0.2s ease 0s;

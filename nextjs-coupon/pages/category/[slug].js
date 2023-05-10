@@ -60,7 +60,6 @@ export async function getStaticProps(ctx) {
         );
         
         const categoryPage = res.categoryPage;
-        console.log(categoryPage)
         const siteList = res.siteList;
         const catList = res.catList;
         return { props: { ...categoryPage, siteList, slug, catList }};
