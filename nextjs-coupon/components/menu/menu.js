@@ -12,7 +12,7 @@ export default function Menu({ slug, catList=[] }) {
         return (
         <li key={cat.id} className={styles.menu__listItem}>
           <Link
-            className={`${styles.menu__link}  ${"menu__" + cat.attributes.slug} ${"menu__" + cat.attributes.slug}${ slug === cat.attributes.slug ? "Active" : "" }`}
+            className={`${styles.menu__link} ${"menu__link"} ${"menu__" + cat.attributes.slug} ${"menu__" + cat.attributes.slug}${ slug === cat.attributes.slug ? "Active" : "" }`}
             href="/category/jackpot"
           >
             {" "}

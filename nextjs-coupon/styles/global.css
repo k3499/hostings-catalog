@@ -64,6 +64,15 @@ body {
   z-index: 0;
 }
 /*category menu*/
+.menu__link::before {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--purple) 20%, var(--blue) 100%);
+  font-size: 1.2rem;
+  vertical-align: middle;
+  padding: 5px 8px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
 .crashLink::before {
   content: "";
   background: url(/images/crash.png) no-repeat 50%;
