@@ -19,5 +19,6 @@
 @media (max-width: 540px){
     .popular__wrapper{
         flex-direction: column; 
+        padding: 0 20px;
     }
 }
