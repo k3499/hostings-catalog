@@ -18,7 +18,7 @@ export default function Category({ title, slug, description, page_description, m
             <meta name='description' content={description} />
             <title>{title}</title>
         </Head>
-        <Header handleMobileMenu={handleMobileMenu} mobileMenu={mobileMenu}/>
+        <Header slug={slug} catList={catList}/>
         <div className={homeStyles.wrapper}>
             <Sidebar slug={slug} catList={catList}/>
             <main className={homeStyles.main}>

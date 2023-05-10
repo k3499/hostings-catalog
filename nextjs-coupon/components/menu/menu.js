@@ -2,7 +2,6 @@ import styles from "./menu.module.css";
 import Link from "next/link";
 
 export default function Menu({ slug, catList=[] }) {
-  const menuList = ["jackpot", "crash"];
   console.log(catList)
   return (
     <nav>
@@ -23,7 +22,7 @@ export default function Menu({ slug, catList=[] }) {
       })}
 
 
-      <li className={styles.menu__listItem}>
+      {/* <li className={styles.menu__listItem}>
         <Link
           className={`${styles.menu__link}  ${styles.crashLink} ${styles.crashLinkActive}`}
           href="/category/jackpot"
@@ -76,7 +75,7 @@ export default function Menu({ slug, catList=[] }) {
           {" "}
           Маркеты
         </a>
-      </li>
+      </li> */}
     </ul>
   </nav>
   )

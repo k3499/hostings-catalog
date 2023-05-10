@@ -105,9 +105,10 @@
     }
     .title {
       font-size: 2.3rem;
+      margin: 20px 0 30px;
     }
     .secondTitle {
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
     .banner {
       padding: 14px 25px;

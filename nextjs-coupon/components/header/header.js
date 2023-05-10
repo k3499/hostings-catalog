@@ -6,7 +6,7 @@ import Link from "next/link";
 import MobileMenu from "../mobileMenu/mobileMenu";
 import Menu from "../menu/menu";
 
-export default function Header() {
+export default function Header({ slug, catList }) {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   function handleMobileMenuClick(e) {
@@ -64,7 +64,7 @@ export default function Header() {
         </nav>
       </div>
       <div className={styles.header__mobileMenu} id="mobileMenu">
-        <Menu/>
+        <Menu slug={slug} catList={catList}/>
       </div>
     </header>
   )
