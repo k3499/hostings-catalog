@@ -7,7 +7,7 @@ import homeStyles from "../../styles/Home.module.css"
 import CatHead from '../../components/catHead/CatHead'
 import SitesList from '../../components/sitesList/sitesList';
 
-export default function Category({ title, slug, description, page_description, mobileMenu, handleMobileMenu, siteList, catList }){
+export default function Category({ title, image, slug, description, page_description, siteList, catList }){
     return (
         <>
         <Head>
@@ -22,7 +22,7 @@ export default function Category({ title, slug, description, page_description, m
         <div className={homeStyles.wrapper}>
             <Sidebar slug={slug} catList={catList}/>
             <main className={homeStyles.main}>
-            <CatHead title={title}/>
+            <CatHead title={title} description={description} image={image}/>
             <SitesList siteList={siteList}/>
             </main>
         </div>
@@ -47,7 +47,7 @@ export async function getStaticProps(ctx) {
     try {
         const { slug } = ctx.params;
         const res = await axios.all([
-          axios.get('http://127.0.0.1:1337/api/categories/?filters[slug][$eq]=' + slug), 
+          axios.get('http://127.0.0.1:1337/api/categories/?populate=image&filters[slug][$eq]=' + slug), 
           axios.get('http://127.0.0.1:1337/api/sites-lists?filters[$and][0][categories][slug][$eq]='+ slug),
           axios.get('http://127.0.0.1:1337/api/categories/')
         ])
@@ -60,6 +60,7 @@ export async function getStaticProps(ctx) {
         );
         
         const categoryPage = res.categoryPage;
+        console.log(categoryPage)
         const siteList = res.siteList;
         const catList = res.catList;
         return { props: { ...categoryPage, siteList, slug, catList }};

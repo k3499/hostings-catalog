@@ -31,9 +31,11 @@
     text-shadow: -4px 3px 0px rgb(82 70 179 / 55%);
 }
 .bannerImg{
+    /* background: url(/images/crash-bg.png) no-repeat; */
+}
+.bannerImg{
     width: 380px;
     height: 351px;
-    background: url(/images/crash-bg.png) no-repeat;
     background-size: contain;
     position: absolute;
     right: 70px;
@@ -53,8 +55,8 @@
     }
     .bannerImg {
       right: 8px;
-      background-position-x: 100%;
-      background-size: 85%;
+      background-position-x: 100% !important;
+      background-size: 85% !important;
       width: 378px;
       height: 303px;
     }
