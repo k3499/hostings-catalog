@@ -7,7 +7,7 @@ import Popular from "../components/popular/popular"
 import homeStyles from "../styles/Home.module.css"
 import Footer from '../components/footer/footer'
 
-function Home({ title, description, page_description, siteList, mobileMenu, handleMobileMenu, catList }) {
+function Home({ title, description, page_description, siteList, catList }) {
   return (
     <>
       <Head>
