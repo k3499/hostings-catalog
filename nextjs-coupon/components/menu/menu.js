@@ -1,7 +1,8 @@
 import styles from "./menu.module.css";
 import Link from "next/link";
 
-export default function Menu({ slug, catList=[] }) {
+export default function Menu({ slug, catList=[], handleMobileMenuChose }) {
+
   return (
     <nav>
     <ul className={styles.list}>
@@ -11,6 +12,7 @@ export default function Menu({ slug, catList=[] }) {
           <Link
             className={`${styles.link} ${"menu__link"} ${"menu__" + cat.attributes.slug} ${ slug === cat.attributes.slug ? "menu__" + cat.attributes.slug + "-active" : "" }`}
             href={"/category/" + cat.attributes.slug}
+            onClick={handleMobileMenuChose}
           >
             {" "}
             {cat.attributes.title}

@@ -8,6 +8,17 @@ import Menu from "../menu/menu";
 export default function Header({ slug, catList }) {
   const [mobileMenu, setMobileMenu] = useState(false);
 
+  //клик по пункту меню
+  function handleMobileMenuChose(){
+    const mobileMenuBlock = document.querySelector("#mobileMenu");
+    
+      setMobileMenu(false);
+      mobileMenuBlock.style.display = 'none';
+      mobileMenuBlock.classList.remove(styles.fadeIn);
+      mobileMenuBlock.classList.add(styles.fadeOut);
+  }
+
+  //клик по открыть меню
   function handleMobileMenuClick(e) {
     e.preventDefault()
     const mobileMenuBlock = document.querySelector("#mobileMenu");
@@ -63,7 +74,7 @@ export default function Header({ slug, catList }) {
         </nav>
       </div>
       <div className={styles.mobileMenu} id="mobileMenu">
-        <Menu slug={slug} catList={catList}/>
+        <Menu slug={slug} catList={catList} handleMobileMenuChose={handleMobileMenuChose}/>
       </div>
     </header>
   )
