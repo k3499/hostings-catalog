@@ -11,7 +11,7 @@
 }
 .logo {
   text-decoration: none;
-  background: url(/images/logo-width.png) no-repeat;
+  background: url(/images/logo-desctop.svg) no-repeat;
   background-size: contain;
   text-indent: -999999999px;
   overflow: hidden;
@@ -74,7 +74,7 @@
 }
 @media (max-width: 625px) {
   .logo {
-    background: url(/images/logo.png) no-repeat;
+    background: url(/images/logo-mobile.svg) no-repeat;
     background-size: contain;
     height: 40px;
     width: 40px;

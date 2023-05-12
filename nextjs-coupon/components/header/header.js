@@ -1,9 +1,8 @@
 import styles from "./header.module.css"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import MobileMenu from "../mobileMenu/mobileMenu";
 import Menu from "../menu/menu";
 
 export default function Header({ slug, catList }) {
