@@ -42,7 +42,6 @@ export default function Card({site}) {
                 <Link href={`/` + site.slug} className={styles.link}>
                     <Image
                         className={styles.img}
-                        loading="lazy"
                         src={logoFail}
                         placeholder="blur"
                         alt="csfail промокод"

@@ -1,6 +1,5 @@
 import styles from "./singleHead.module.css"
 import utils from "../../styles/utils.module.css"
-import { Russo_One } from "next/font/google"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCopy } from "@fortawesome/free-solid-svg-icons"
 import { Swiper, SwiperSlide } from "swiper/react"
