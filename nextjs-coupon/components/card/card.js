@@ -30,18 +30,18 @@ export default function Card({site}) {
     };
 
     return (
-        <article className={styles.card__wrap}>
+        <article className={styles.wrap}>
             { site.money 
-            ? <div className={styles.card__money}>{site.money}</div>  
+            ? <div className={styles.money}>{site.money}</div>  
             : ""
             }
-            <a className={styles.card__info}>
+            <a className={styles.info}>
                 <FontAwesomeIcon style={{fontSize:"15px"}} icon={faCircleInfo}></FontAwesomeIcon>
             </a>
-            <div className={styles.card__imgContainer}>
-                <Link href={`/` + site.slug} className={styles.card__link}>
+            <div className={styles.imgContainer}>
+                <Link href={`/` + site.slug} className={styles.link}>
                     <Image
-                        className={styles.card__img}
+                        className={styles.img}
                         loading="lazy"
                         src={logoFail}
                         placeholder="blur"
@@ -50,16 +50,16 @@ export default function Card({site}) {
                 </Link>
             </div>
             { site.promocode
-            ? <h2 className={styles.card__title}><span>Промокод</span> {site.siteName}</h2>
-            : <h2 className={styles.card__title}> {site.siteName}</h2>
+            ? <h2 className={styles.title}><span>Промокод</span> {site.siteName}</h2>
+            : <h2 className={styles.title}> {site.siteName}</h2>
             }
             
             <div>
                 { site.promocode
                 ? <>
-                    <div className={styles.card__promoCodeWrap}>
-                        <input className={styles.card__promoCode} type="text" value={site.promocode} readOnly ref={inputRef}/>
-                        <button className={styles.card__promoCopy}  onClick={copyToClipboard}>
+                    <div className={styles.promoCodeWrap}>
+                        <input className={styles.promoCode} type="text" value={site.promocode} readOnly ref={inputRef}/>
+                        <button className={styles.promoCopy}  onClick={copyToClipboard}>
                             {copyingStatus 
                             ?<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCheck}></FontAwesomeIcon>
                             :<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCopy}></FontAwesomeIcon>
@@ -68,14 +68,14 @@ export default function Card({site}) {
                     </div>
                 </>
                 :<>
-                    <div className={styles.card__promoCodeWrap}>
-                        <input className={styles.card__promoCode} type="text" value="Код не нужен" readOnly disabled/>
+                    <div className={styles.promoCodeWrap}>
+                        <input className={styles.promoCode} type="text" value="Код не нужен" readOnly disabled/>
                     </div>
                 </>
                 }
   
             </div>
-            <a href={site.link} target="_blank" className={`${utils.button} ${styles.card__promoSiteLink}`}>Получить</a>
+            <a href={site.link} target="_blank" className={`${utils.button} ${styles.promoSiteLink}`}>Получить</a>
         </article>
     );
 }

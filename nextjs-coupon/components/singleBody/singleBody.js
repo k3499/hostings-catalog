@@ -7,8 +7,8 @@ const open = Open_Sans({ subsets: ['latin', 'cyrillic'], weight: ['400', '600'] 
 export default function SingleHead({ title, pageText }) {
   return (
     <div className={styles.singleBody}>
-      <h1 className={styles.singleBody__title}>{title}</h1>
-      <div className={`${styles.singleBody__text}  ${open.className}`}>
+      <h1 className={styles.title}>{title}</h1>
+      <div className={`${styles.text}  ${open.className}`}>
           <MDXRemote {...pageText}  />
       </div>
     </div>

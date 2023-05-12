@@ -1,17 +1,17 @@
-.menu__list {
+.list {
   list-style: none;
   padding: 0;
   margin: 0;
   margin: 0;
 }
-.menu__link {
+.link {
   display: block;
   color: #e3e4f8;
   text-decoration: none;
   cursor: pointer;
   font-size: 1.1rem;
 }
-.menu__listItem {
+.listItem {
   margin-bottom: 10px;
   cursor: pointer !important;
 }

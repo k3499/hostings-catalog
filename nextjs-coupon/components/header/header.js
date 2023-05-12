@@ -36,18 +36,18 @@ export default function Header({ slug, catList }) {
   }
   return (
     <header className={styles.header}>
-      <div className={styles.header__wrapper}>
+      <div className={styles.wrapper}>
         <Link className={styles.logo} href="/">
           Be Skin
         </Link>
-        <nav className={styles.header__topMenu}>
+        <nav className={styles.topMenu}>
           <a href="#" className={styles.button}>
             Добавить сайт
           </a>
           <a
             onClick={handleMobileMenuClick}
             href="/"
-            className={styles.header__burger}
+            className={styles.burger}
             id="header__burger"
           >
             {mobileMenu 
@@ -62,7 +62,7 @@ export default function Header({ slug, catList }) {
           </a>
         </nav>
       </div>
-      <div className={styles.header__mobileMenu} id="mobileMenu">
+      <div className={styles.mobileMenu} id="mobileMenu">
         <Menu slug={slug} catList={catList}/>
       </div>
     </header>

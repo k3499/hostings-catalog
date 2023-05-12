@@ -1,4 +1,4 @@
-.card__wrap{
+.wrap{
     position: relative;
     width: calc(33.333% - 20px);
     min-height: 287px;
@@ -8,7 +8,7 @@
     box-sizing: border-box;
     padding: 13px;
 }
-.card__money{
+.money{
     position: absolute;
     top: -9px;
     left: -11px;
@@ -19,38 +19,38 @@
     z-index: 0;
     border-radius: 5px 5px 0 5px;
 }
-.card__info{
+.info{
     position: absolute;
     color: #5B5B67;
     right: 18px;
     top: 22px;
     cursor: help;
 }
-.card__info:hover{
+.info:hover{
     color: #d8ff20;
 }
-.card__imgContainer{
+.imgContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-.card__link{
+.link{
     margin-top: 5px;
 }
-.card__img{
+.img{
     height: 100%;
     max-width: 100%;
     border: 1px solid #31303e;
     box-sizing: border-box;
 }
-.card__title{
+.title{
     padding: 0 20px 0 0;
     margin: 8px 0 15px;
     font-weight: normal;
     font-size: 1rem;
 }
-.card__promoCodeWrap{
+.promoCodeWrap{
     position: relative;
     background: #2D2C3A;
     border: 1px solid #31313D;
@@ -58,7 +58,7 @@
     color: #9997b3;
     border-radius: 7px;
 }
-.card__promoCode{
+.promoCode{
     background: #2D2C3A;
     padding: 10px;
     font-size: 1.2rem;
@@ -67,7 +67,7 @@
     border: 0;
     width: calc(100% - 43px);
 }
-.card__promoCopy{
+.promoCopy{
     -webkit-font-smoothing: antialiased;
     background: var(--lime);
     -webkit-text-fill-color: #8f8e99;
@@ -82,7 +82,7 @@
     border-radius: 7px;
     cursor: pointer;
 }
-.card__promoSiteLink{
+.promoSiteLink{
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -96,17 +96,17 @@
     /* color: #1c0de3; */
 }
 @media (max-width: 1199px) {
-    .card__title{
+    .title{
         text-align: center;
         font-size: 1.1rem;
         padding: 0;
     }
-    .card__title span{
+    .title span{
         display: block;
     }
 }
 @media (max-width: 1030px) {
-    .card__wrap{
+    .wrap{
         width: calc(50% - 20px);
         min-height: 287px;
         background: var(--bgcard);
@@ -117,17 +117,17 @@
     }
 }
 @media (max-width: 685px){
-    .card__promoCode{
+    .promoCode{
         font-size: 1rem;
     }
 }
 @media (max-width: 560px){
-    .card__promoCode{
+    .promoCode{
         font-size: 0.85rem;
     }
 }
 @media (max-width: 540px){
-    .card__wrap{
+    .wrap{
         width: 100%;
     }
 }

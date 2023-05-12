@@ -5,14 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCopy } from "@fortawesome/free-solid-svg-icons"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { A11y, Autoplay } from "swiper"
-import { urlBuilder, myLoader } from "../../utils/utils"
+import { urlBuilder} from "../../utils/utils"
 import Image from "next/image"
-import scrin from "/public/images/csgofail.jpg"
 import "swiper/css"
 import "swiper/css/a11y"
 import "swiper/css/autoplay"
-
-const russo = Russo_One({ subsets: ["latin", "cyrillic"], weight: "400" })
 
 export default function SingleHead({
   slides,
@@ -34,7 +31,7 @@ export default function SingleHead({
   }
   return (
     <div className={styles.singleHead}>
-      <div className={styles.singleHead__swiper}>
+      <div className={styles.swiper}>
         <Swiper {...swiperParameters}>
           {slides.data.map((slide) => {
             console.log(slide)
@@ -52,7 +49,7 @@ export default function SingleHead({
           })}
         </Swiper>
       </div>
-      <div className={styles.singleHead__codeWrap}>
+      <div className={styles.codeWrap}>
         <div className={styles.logoContainer}>
           <Image
             className={styles.logo}
@@ -63,11 +60,10 @@ export default function SingleHead({
             fill
           />
         </div>
-        {/* <p className={`${styles.singleHead__title} ${russo.className}`}>{siteName}</p> */}
         {promocode ? (
-          <div className={styles.singleHead__code}>
+          <div className={styles.code}>
             {promocode}
-            <button className={styles.singleHead__promoCopy}>
+            <button className={styles.promoCopy}>
               <FontAwesomeIcon
                 style={{ fontSize: "20px" }}
                 icon={faCopy}
@@ -77,11 +73,11 @@ export default function SingleHead({
         ) : (
           ""
         )}
-        {money ? <p className={styles.singleHead__money}>{money}</p> : ""}
+        {money ? <p className={styles.money}>{money}</p> : ""}
         <a
           href={link}
           target="_blank"
-          className={`${styles.singleHead__link} ${utils.button}`}
+          className={`${styles.link} ${utils.button}`}
         >
           Получить бонус
         </a>

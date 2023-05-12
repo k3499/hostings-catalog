@@ -1,4 +1,4 @@
-.header__wrapper {
+.wrapper {
   max-width: 1200px;
   box-sizing: border-box;
   padding: 15px 20px;
@@ -28,19 +28,19 @@
   background-size: 150% 150%;
   cursor: pointer;
 }
-.header__burger {
+.burger {
   display: none;
   width: 30px;
   height: 30px;
   color: #fff;
 }
-.header__topMenu {
+.topMenu {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 /*mobile menu*/
-.header__mobileMenu{
+.mobileMenu{
   display: none;
   background: var(--bgmain);
   height: 0;
@@ -68,7 +68,7 @@
     z-index: 99999;
     width: 100%;
   }
-  .header__burger {
+  .burger {
     display: block;
   }
 }
