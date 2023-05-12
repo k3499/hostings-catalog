@@ -16,8 +16,7 @@ export default function MainBanner() {
             enabled: true,
             delay: 6000, 
             pauseOnMouseEnter: true,
-        },
-        lazy: { enabled: true },
+        }
     };
     return (
         
