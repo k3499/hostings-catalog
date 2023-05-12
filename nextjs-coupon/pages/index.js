@@ -7,7 +7,7 @@ import Popular from "../components/popular/popular"
 import homeStyles from "../styles/Home.module.css"
 import Footer from '../components/footer/footer'
 
-function Home({ title, description, page_description, siteList, catList }) {
+function Home({ title, description, page_description, siteList, catList, mainSlider }) {
   return (
     <>
       <Head>
@@ -22,7 +22,7 @@ function Home({ title, description, page_description, siteList, catList }) {
       <div className={homeStyles.wrapper}>
         <Sidebar catList={catList}/>
         <main className={homeStyles.main}>
-          <MainBanner />
+          <MainBanner mainSlider={mainSlider}/>
           <Popular siteList={siteList}/>
         </main>
       </div>
@@ -36,19 +36,22 @@ export async function getStaticProps(context) {
     const res = await axios.all([
         axios.get('http://127.0.0.1:1337/api/homepage'), 
         axios.get('http://127.0.0.1:1337/api/sites-lists'),
-        axios.get('http://127.0.0.1:1337/api/categories/')
+        axios.get('http://127.0.0.1:1337/api/categories'),
+        axios.get('http://127.0.0.1:1337/api/main-banners?populate=image')
       ])
-      .then(axios.spread((home, sites, categoryAll) => {
+      .then(axios.spread((home, sites, categoryAll, slider) => {
         const homePage = home.data.data.attributes;
         const siteList = sites.data.data;
         const catList = categoryAll.data.data;
-        return {homePage, siteList, catList} 
+        const mainSlider = slider.data.data;
+        return {homePage, siteList, catList, mainSlider}
         })
       );
       const homePage = res.homePage;
       const siteList = res.siteList;
       const catList = res.catList;
-      return { props: { ...homePage, siteList, catList }};
+      const mainSlider = res.mainSlider;
+      return { props: { ...homePage, siteList, catList, mainSlider }};
     } catch (error) {
        return { props: { ...error } };
       }

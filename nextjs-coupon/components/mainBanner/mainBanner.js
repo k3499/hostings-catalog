@@ -8,7 +8,8 @@ import "swiper/css/autoplay";
 
 const russo = Russo_One({ subsets: ['latin', 'cyrillic'], weight: ['400'], });
 
-export default function MainBanner() {
+export default function MainBanner({ mainSlider }) {
+    console.log(mainSlider)
     const swiperParameters = {
         modules: [A11y, Autoplay],
         loop: true,
@@ -21,44 +22,26 @@ export default function MainBanner() {
     return (
         
             <Swiper {...swiperParameters}>
-                <SwiperSlide>
-                <div className={styles.banner}>
-                    <div className={styles.wrapper}>
-                        <p className={`${styles.title}  ${russo.className}`}>CSFAIL</p>
-                        <p className={`${styles.secondTitle} ${russo.className}`}>Бонус 0.05$</p>
-                        <p className={styles.subtitle}>Промокод на баланс на популярном Crash сайте</p>
-                        <div className={styles.codeWrapper}>
-                            <a className={styles.link} href="/" target='_blank' >Получить Бонус</a>
+                {mainSlider.map((element) => {
+                    return (
+                    <SwiperSlide key={element.id}>
+                        <div className={styles.banner}>
+                            <div className={styles.wrapper}>
+                                <p className={`${styles.title}  ${russo.className} `}>{element.attributes.title}</p>
+                                {element.attributes.bonus 
+                                ?<p className={`${styles.secondTitle} ${russo.className}`}>{element.attributes.bonus}</p>
+                                : ""
+                                }
+                                <p className={styles.subtitle}>{element.attributes.description}</p>
+                                <div className={styles.codeWrapper}>
+                                    <a className={styles.link} href={element.attributes.link} target='_blank' >Получить Бонус</a>
+                                </div>
+                            </div>
+                            <div className={`${styles.bannerImg} ${styles.bannerKerambitBg}`}></div>
                         </div>
-                    </div>
-                    <div className={`${styles.bannerImg} ${styles.bannerKerambitBg}`}></div>
-                </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                <div className={styles.banner}>
-                    <div className={styles.wrapper}>
-                        <p className={`${styles.title}  ${russo.className}`}>CSFAIL</p>
-                        <p className={`${styles.secondTitle} ${russo.className}`}>Бонус 0.05$</p>
-                        <p className={styles.subtitle}>Промокод на баланс на одном из лучших Crash сайтов</p>
-                        <div className={styles.codeWrapper}>
-                            <a className={styles.link} href="/" target='_blank' >Получить Бонус</a>
-                        </div>
-                    </div>
-                    <div className={`${styles.bannerImg} ${styles.bannerAk}`}></div>
-                </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                <div className={styles.banner}>
-                    <div className={styles.wrapper}>
-                        <p className={`${styles.title}  ${russo.className}`}>CSFAIL</p>
-                        <p className={`${styles.secondTitle} ${russo.className}`}>Бонус 0.05$</p>
-                        <p className={styles.subtitle}>Промокод на баланс на одном из лучших Crash сайтов</p>
-                    </div>
-                    <div className={styles.bannerKerambitBg}></div>
-                </div>
-                </SwiperSlide>
+                    </SwiperSlide>
+                    );
+                })}
             </Swiper>
-
-
     );
 }
