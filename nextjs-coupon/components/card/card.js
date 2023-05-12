@@ -45,6 +45,7 @@ export default function Card({site}) {
                         src={logoFail}
                         placeholder="blur"
                         alt="csfail промокод"
+                        priority={true}
                     />
                 </Link>
             </div>
