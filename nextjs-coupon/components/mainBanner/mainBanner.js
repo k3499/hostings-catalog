@@ -9,7 +9,6 @@ import "swiper/css/autoplay";
 const russo = Russo_One({ subsets: ['latin', 'cyrillic'], weight: ['400'], });
 
 export default function MainBanner({ mainSlider }) {
-    console.log(mainSlider)
     const swiperParameters = {
         modules: [A11y, Autoplay],
         loop: true,
