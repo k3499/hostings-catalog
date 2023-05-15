@@ -12,7 +12,7 @@ export default function CatHead({title, description, image}) {
             </div>
             {image.data === null
             ? console.log("no category image")
-            : <div className={styles.bannerImg} style={{ background: `url(https://api.besplatno-skin.com/${image.data.attributes.url}) no-repeat`}}></div>
+            : <div className={styles.bannerImg} style={{ background: `url(https://api.besplatno-skin.com${image.data.attributes.url}) no-repeat`}}></div>
             }
         </div>
     );
