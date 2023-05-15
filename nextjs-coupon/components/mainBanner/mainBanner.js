@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/a11y";
 import "swiper/css/autoplay";
 
-const russo = Russo_One({ subsets: ['latin', 'cyrillic'], weight: ['400'], });
+const russo = Russo_One({ subsets: ['latin', 'cyrillic'], weight: ['400'], fontStyle: ['italic'] });
 
 export default function MainBanner({ mainSlider }) {
     const swiperParameters = {
@@ -26,7 +26,7 @@ export default function MainBanner({ mainSlider }) {
                     <SwiperSlide key={element.id}>
                         <div className={styles.banner}>
                             <div className={styles.wrapper}>
-                                <p className={`${styles.title}  ${russo.className} `}>{element.attributes.title}</p>
+                                <p className={`${styles.title} ${russo.className} `}>{element.attributes.title}</p>
                                 {element.attributes.bonus 
                                 ?<p className={`${styles.secondTitle} ${russo.className}`}>{element.attributes.bonus}</p>
                                 : ""
