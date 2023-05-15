@@ -1,0 +1,17 @@
+.wrapper{
+    display:flex;
+    row-gap: 50px;
+    column-gap: 30px;
+}
+.title{
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin: 40px 0 10px;
+}
+.hr{
+    height: 1px;
+    width: 100%;
+    background: #22222d;
+    margin: 0 0 40px;
+    border-bottom: 1px solid #343341;
+}
