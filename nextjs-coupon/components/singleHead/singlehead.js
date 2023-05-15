@@ -1,7 +1,8 @@
+import {useRef, useState} from 'react';
 import styles from "./singleHead.module.css"
 import utils from "../../styles/utils.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCopy } from "@fortawesome/free-solid-svg-icons"
+import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { A11y, Autoplay } from "swiper"
 import { urlBuilder} from "../../utils/utils"
@@ -28,6 +29,25 @@ export default function SingleHead({
     },
     lazy: { enabled: true },
   }
+
+  const inputRef = useRef(null);
+  const [copyingStatus, setCopyingStatus] = useState(false)
+
+  const copyToClipboard = (evt) => {
+    const copyButton = evt.currentTarget;
+    let textToCopy = inputRef.current.value;
+    navigator.clipboard.writeText(textToCopy)
+    .then(() => {
+        console.log('Текст скопирован в буфер обмена:', textToCopy);
+        setCopyingStatus(true);
+        setTimeout(() => {
+            setCopyingStatus(false);
+          }, 600);        
+    })
+    .catch((err) => {
+        console.error('Ошибка при копировании текста в буфер обмена:', err);
+    });
+};
   return (
     <div className={styles.singleHead}>
       <div className={styles.swiper}>
@@ -60,12 +80,12 @@ export default function SingleHead({
         </div>
         {promocode ? (
           <div className={styles.code}>
-            {promocode}
-            <button className={styles.promoCopy}>
-              <FontAwesomeIcon
-                style={{ fontSize: "20px" }}
-                icon={faCopy}
-              ></FontAwesomeIcon>
+            <input className={styles.promoCode} type="text" value={promocode} readOnly ref={inputRef}/>
+            <button className={styles.promoCopy} onClick={copyToClipboard}>
+              {copyingStatus 
+                ?<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCheck}></FontAwesomeIcon>
+                :<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCopy}></FontAwesomeIcon>
+              }
             </button>
           </div>
         ) : (

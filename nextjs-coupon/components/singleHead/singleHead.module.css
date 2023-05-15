@@ -29,7 +29,6 @@
   position: relative;
   background: #2d2c3a;
   border: 2px solid #d8ff20;
-  padding: 10px 55px 10px 10px;
   font-size: 1.2rem;
   color: #9997b3;
   border-radius: 10px;
@@ -38,6 +37,7 @@
   margin: 0 auto;
   margin-bottom: 10px;
   min-width: 60%;
+  margin: 0 20px 10px;
 }
 .cardImgWrap {
   width: 100%;
@@ -52,6 +52,15 @@
   background: linear-gradient(45deg, #7a5fea 20%, var(--blue) 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.promoCode{
+  background: #2D2C3A;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #9997b3;
+  outline: none;
+  border: 0;
+  width: calc(100% - 43px);
 }
 .promoCopy {
   -webkit-font-smoothing: antialiased;

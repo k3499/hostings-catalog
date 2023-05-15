@@ -1,3 +1,4 @@
+import {useRef, useState} from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -5,7 +6,6 @@ import { faCircleInfo, faCopy, faCheck } from "@fortawesome/free-solid-svg-icons
 import styles from './card.module.css'
 import utils from '../../styles/utils.module.css'
 import logoFail from "/public/images/promokod-csfail.jpg"
-import {useRef, useState} from 'react';
 
 export default function Card({site}) {
     const inputRef = useRef(null);
@@ -17,10 +17,8 @@ export default function Card({site}) {
         navigator.clipboard.writeText(textToCopy)
         .then(() => {
             console.log('Текст скопирован в буфер обмена:', textToCopy);
-            copyButton.classList.add(styles.buttonYellow_active);
             setCopyingStatus(true);
             setTimeout(() => {
-                copyButton.classList.remove(styles.buttonYellow_active);
                 setCopyingStatus(false);
               }, 600);        
         })

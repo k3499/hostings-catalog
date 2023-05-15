@@ -91,12 +91,6 @@
     text-align: center;
     margin-top: 14px;
 }
-.buttonYellow_active{
-    background: #e7f79c;
-    border: 2px solid #d8ff20;
-    box-sizing: border-box;
-    /* color: #1c0de3; */
-}
 @media (max-width: 1199px) {
     .title{
         text-align: center;

@@ -12,7 +12,6 @@ import Related from "../components/related/related"
 function fail({
   title,
   description,
-  categories,
   siteName,
   link,
   promocode,
@@ -24,6 +23,7 @@ function fail({
   catList,
   related
 }) {
+
   return (
     <>
       <Head>
