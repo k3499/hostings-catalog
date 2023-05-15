@@ -48,4 +48,12 @@
     .text{
         font-size: 1rem;
     }
+    
 }
+@media (max-width: 494px) {
+    .singleBody{
+        background: #383749;
+        border-radius: 3px;
+        margin: 30px 20px;
+    }
+  }

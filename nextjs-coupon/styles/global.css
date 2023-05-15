@@ -230,6 +230,11 @@ body {
     height: 315px;
   }
 }
+@media (max-width: 620px) {
+  .swiper {
+    margin-bottom: 0;
+  }
+}
 
 @media (max-width: 494px) {
   .swiper {

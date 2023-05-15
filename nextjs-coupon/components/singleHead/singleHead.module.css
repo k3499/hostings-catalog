@@ -86,6 +86,9 @@
   border-radius: 0 10px 0 0;
 }
 @media (max-width: 1099px) {
+  .codeWrap{
+    height: 285px;
+  }
   .singleHead {
     display: flex;
     height: auto;

@@ -57,24 +57,6 @@ function fail({
 
 export async function getStaticProps() {
   try {
-  //   const res = await axios
-  //     .get(
-  //       "http://127.0.0.1:1337/api/sites-lists?filters[slug][$eq]=fail&populate=*"
-  //     )
-  //     .then((res) => {
-  //       const singlePage = res.data.data[0].attributes
-  //       return { singlePage }
-  //     })
-  //   const site = res.singlePage
-  //   const pageTextMDX = site.text
-  //   //сериализация markdown
-  //   const pageText = await serialize(pageTextMDX)
-  //   return { props: { ...site, pageText } }
-  // } catch (error) {
-  //   return { props: { ...error } }
-  // }
-
-
   const res = await axios.all([
     axios.get('http://127.0.0.1:1337/api/sites-lists?filters[slug][$eq]=fail&populate=*'), 
     axios.get('http://127.0.0.1:1337/api/categories/')
