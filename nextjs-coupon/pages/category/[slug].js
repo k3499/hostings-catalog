@@ -7,22 +7,33 @@ import homeStyles from "../../styles/Home.module.css"
 import CatHead from '../../components/catHead/CatHead'
 import SitesList from '../../components/sitesList/sitesList';
 
-export default function Category({ title, image, slug, description, page_description, siteList, catList }){
+export default function Category({ title, image, slug, headDesc, customTitle, description, page_description, siteList, catList }){
     return (
         <>
         <Head>
             <meta charset="UTF-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <meta name='title' content={title} />
-            <meta name='description' content={description} />
-            <title>{title}</title>
+            <meta name='title' content={customTitle  === null
+              ? title + " КС ГО | рейтинг сайтов с бесплатными скинами CS:GO" 
+              : customTitle
+              } />
+            <meta name='description' content={ description === null
+              ? "Список сайтов " + title + 
+              " КС ГО и Dota 2 с бесплатными скинами и промокодами. Заходи и выбирай лучший " + title + 
+              " сайт с большими бонусами. Используй промокод и выводи скины в Steam "
+              : description
+            } />
+            { customTitle  === null
+                ? <title>{ title } + " КС ГО | рейтинг сайтов с бесплатными скинами CS:GO"</title>
+                : <title>{ customTitle }</title>
+            } 
         </Head>
         <Header slug={slug} catList={catList}/>
         <div className={homeStyles.wrapper}>
             <Sidebar slug={slug} catList={catList}/>
             <main className={homeStyles.main}>
-            <CatHead title={title} description={description} image={image}/>
+            <CatHead title={title} description={headDesc} image={image}/>
             <SitesList siteList={siteList}/>
             </main>
         </div>

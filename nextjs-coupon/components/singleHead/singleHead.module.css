@@ -113,7 +113,6 @@
     font-size: 2rem;
   }
   .code {
-    padding: 7px 49px 7px 4px;
     font-size: 1.1rem;
   }
 }
@@ -135,6 +134,9 @@
   }
   .swiper {
     width: calc(100% - 210px);
+  }
+  .promoCode{
+    font-size: 1rem;
   }
 }
 @media (max-width: 620px) {
