@@ -25,7 +25,7 @@ export default function Category({ title, image, slug, headDesc, customTitle, de
               : description
             } />
             { customTitle  === null
-                ? <title>{ title } + " КС ГО | рейтинг сайтов с бесплатными скинами CS:GO"</title>
+                ? <title>{ title } КС ГО | рейтинг сайтов с бесплатными скинами CS:GO</title>
                 : <title>{ customTitle }</title>
             } 
         </Head>
