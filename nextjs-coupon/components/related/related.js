@@ -23,7 +23,7 @@ export default function Related({ related }) {
         return array;
     }
     useEffect(() => {
-        setShuffleRelated(shuffle(related))
+        setShuffleRelated(shuffle(related).slice(0, 3))
     }, []);
     return (
         <section className={styles.related}>
@@ -31,7 +31,7 @@ export default function Related({ related }) {
             <div className={styles.hr}></div>
             <div className={styles.wrapper}>
                 {shuffleRelated.map((element) => {
-                    return (<Card key={element.id} site={element.attributes}/>);
+                        return (<Card key={element.id} site={element.attributes}/>);
                 })}
             </div>
         </section>

@@ -50,7 +50,7 @@ function fail({
           <Related related={related}/>
         </main>
       </div>
-      <Footer />
+      <Footer description={pageText}/>
     </>
   )
 }

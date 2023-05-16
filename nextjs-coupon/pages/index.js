@@ -1,5 +1,6 @@
 import Head from "next/head"
 import axios from 'axios'
+import { serialize } from "next-mdx-remote/serialize"
 import Header from "../components/header/header"
 import Sidebar from "../components/sidebar/sidebar"
 import MainBanner from "../components/mainBanner/mainBanner"
@@ -7,7 +8,7 @@ import Popular from "../components/popular/popular"
 import homeStyles from "../styles/Home.module.css"
 import Footer from '../components/footer/footer'
 
-function Home({ title, description, page_description, siteList, catList, mainSlider }) {
+function Home({ title, description, homePageText, siteList, catList, mainSlider }) {
   return (
     <>
       <Head>
@@ -23,10 +24,12 @@ function Home({ title, description, page_description, siteList, catList, mainSli
         <Sidebar catList={catList}/>
         <main className={homeStyles.main}>
           <MainBanner mainSlider={mainSlider}/>
+          <h1 className={homeStyles.title}>{title}</h1>
+          <div className={homeStyles.hr}></div>
           <Popular siteList={siteList}/>
         </main>
       </div>
-      <Footer description={page_description}/>
+      <Footer description={homePageText}/>
     </>
   )
 }
@@ -51,7 +54,10 @@ export async function getStaticProps(context) {
       const siteList = res.siteList;
       const catList = res.catList;
       const mainSlider = res.mainSlider;
-      return { props: { ...homePage, siteList, catList, mainSlider }};
+      //сериализация markdown
+        const homePageMDX = homePage.page_description;
+        const homePageText = await serialize(homePageMDX)
+      return { props: { ...homePage, siteList, catList, mainSlider, homePageText }};
     } catch (error) {
        return { props: { ...error } };
       }

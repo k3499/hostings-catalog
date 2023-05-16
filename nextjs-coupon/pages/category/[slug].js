@@ -1,5 +1,6 @@
 import Head from "next/head"
 import axios from 'axios'
+import { serialize } from "next-mdx-remote/serialize"
 import Header from "../../components/header/header"
 import Sidebar from "../../components/sidebar/sidebar"
 import Footer from '../../components/footer/footer'
@@ -7,7 +8,7 @@ import homeStyles from "../../styles/Home.module.css"
 import CatHead from '../../components/catHead/CatHead'
 import SitesList from '../../components/sitesList/sitesList';
 
-export default function Category({ title, image, slug, headDesc, customTitle, description, page_description, siteList, catList }){
+export default function Category({ title, image, slug, headDesc, customTitle, description, categoryPageText, siteList, catList }){
     return (
         <>
         <Head>
@@ -37,7 +38,7 @@ export default function Category({ title, image, slug, headDesc, customTitle, de
             <SitesList siteList={siteList}/>
             </main>
         </div>
-        <Footer description={page_description}/>
+        <Footer description={categoryPageText}/>
         </>
     )
 }
@@ -73,7 +74,10 @@ export async function getStaticProps(ctx) {
         const categoryPage = res.categoryPage;
         const siteList = res.siteList;
         const catList = res.catList;
-        return { props: { ...categoryPage, siteList, slug, catList }};
+        //сериализация markdown
+        const categoryPageMDX = categoryPage.page_description;
+        const categoryPageText = await serialize(categoryPageMDX)
+        return { props: { ...categoryPage, siteList, slug, catList, categoryPageText }};
       } catch (error) {
          return { props: { ...error } };
         }

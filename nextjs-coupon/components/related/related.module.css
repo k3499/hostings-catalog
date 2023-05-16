@@ -9,12 +9,12 @@
 .title{
     font-weight: normal;
     font-size: 1.3rem;
-    margin: 40px 20px 10px;
+    margin: 40px 0 10px;
 }
 .hr{
     height: 1px;
     background: #22222d;
-    margin: 0 20px 40px 20px;
+    margin: 0 0 40px;
     border-bottom: 1px solid #343341;
 }
 @media (max-width: 540px){

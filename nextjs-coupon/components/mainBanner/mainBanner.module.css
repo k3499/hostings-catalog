@@ -78,8 +78,8 @@
   }
   .bannerImg {
     right: 8px;
-    background-position-x: 100%;
-    background-size: 85%;
+    background-position-x: 100% !important;
+    background-size: 85% !important;
     width: 378px;
     height: 303px;
   }
