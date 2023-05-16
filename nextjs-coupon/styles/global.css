@@ -31,7 +31,15 @@ body {
   transition: all 0.4s ease-in-out;
 }
 /** Swiper styles **/
+:root {
+  --swiper-pagination-color: rgba(0, 212, 255, 1);
+  --swiper-pagination-bullet-inactive-color: rgba(0, 212, 255, 1);
+}
 
+:root {
+  --swiper-pagination-top: 5px;
+  --swiper-pagination-bottom: auto;
+}
 .swiper {
   user-select: none;
   box-sizing: border-box;
@@ -233,6 +241,12 @@ body {
 @media (max-width: 620px) {
   .swiper {
     margin-bottom: 0;
+  }
+}
+@media (max-width: 585px) {
+  :root {
+    --swiper-pagination-top: auto;
+    --swiper-pagination-bottom: 25px;
   }
 }
 

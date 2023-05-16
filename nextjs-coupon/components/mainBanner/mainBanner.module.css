@@ -129,12 +129,14 @@
 }
 @media (max-width: 495px) {
   .bannerImg {
-    width: 180px;
+    width: 200px;
     height: 161px;
-    top: 23px;
+    top: 16px;
+    right: 20px;
   }
   .title {
     font-size: 2.3rem;
+    margin-bottom: 7px;
   }
   .secondTitle {
     font-size: 1.3rem;
@@ -154,28 +156,15 @@
     margin-top: 0;
   }
 }
-@media (max-width: 405px) {
-  .bannerImg {
-    width: 149px;
-    height: 130px;
-  }
-}
 @media (max-width: 404px) {
-  .bannerImg {
-    display: none;
+  .wrapper {
+    max-width: 157px;
   }
   .subtitle {
     font-size: 0.85rem;
-    max-width: 100%;
   }
   .link {
     padding: 10px 20px;
   }
-  .wrapper {
-    text-align: center;
-  }
-  .codeWrapper {
-    display: flex;
-    justify-content: center;
-  }
+
 }
