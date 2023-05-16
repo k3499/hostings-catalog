@@ -20,6 +20,7 @@ export default function MainBanner({ mainSlider }) {
         },
         pagination: { clickable: true }
     };
+    console.log(mainSlider)
     return (
             <Swiper {...swiperParameters}>
                 {mainSlider.map((element) => {
