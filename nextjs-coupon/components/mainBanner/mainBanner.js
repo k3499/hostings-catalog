@@ -18,9 +18,7 @@ export default function MainBanner({ mainSlider }) {
             delay: 6000, 
             pauseOnMouseEnter: true,
         },
-        pagination: { clickable: true },
-        watchSlidesProgress: true,
-        slidesPerGroupAuto: false,
+        pagination: { clickable: true }
     };
     return (
             <Swiper {...swiperParameters}>
