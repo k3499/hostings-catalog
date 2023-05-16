@@ -5,7 +5,6 @@ import Sidebar from "../components/sidebar/sidebar"
 import MainBanner from "../components/mainBanner/mainBanner"
 import Popular from "../components/popular/popular"
 import homeStyles from "../styles/Home.module.css"
-import Footer from '../components/footer/footer'
 
 function Home({ title, description, page_description, siteList, mobileMenu, handleMobileMenu }) {
   return (
@@ -25,7 +24,6 @@ function Home({ title, description, page_description, siteList, mobileMenu, hand
           404
         </main>
       </div>
-      <Footer description={page_description}/>
     </>
   )
 }
