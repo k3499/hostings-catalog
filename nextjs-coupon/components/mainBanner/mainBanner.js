@@ -20,7 +20,6 @@ export default function MainBanner({ mainSlider }) {
         },
         pagination: { clickable: true }
     };
-    console.log(mainSlider)
     return (
             <Swiper {...swiperParameters}>
                 {mainSlider.map((element) => {
@@ -38,7 +37,7 @@ export default function MainBanner({ mainSlider }) {
                                     <a className={styles.link} href={element.attributes.link} target='_blank' >Получить Бонус</a>
                                 </div>
                             </div>
-                            <div className={`${styles.bannerImg} ${styles.bannerKerambitBg}`}></div>
+                            <div className={`${styles.bannerImg} ${styles.bannerKerambitBg}`} style={{ background: `url(https://api.besplatno-skin.com${element.attributes.image.data.attributes.url}) no-repeat`}}></div>
                         </div>
                     </SwiperSlide>
                     );
