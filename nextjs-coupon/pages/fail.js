@@ -23,13 +23,18 @@ function fail({
   catList,
   related
 }) {
-
+  console.log(slides)
   return (
     <>
       <Head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={"https://api.besplatno-skin.com" + slides.data[0].attributes.url} />
+        <meta property="og:site_name" content="Бесплатные скины КС ГО" />
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <title>{title}</title>
