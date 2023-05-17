@@ -1,3 +1,3 @@
 export function urlBuilder(url) {
-  return "http://localhost:1337" + url.attributes.url
+  return "http://api.besplatno-skin.com" + url.attributes.url
 }
