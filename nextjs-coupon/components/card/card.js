@@ -36,14 +36,15 @@ export default function Card({site}) {
             <a className={styles.info}>
                 <FontAwesomeIcon style={{fontSize:"15px"}} icon={faCircleInfo}></FontAwesomeIcon>
             </a>
-            <div className={styles.imgContainer}>
+            <div className={styles.imgContainer} itemscope itemtype="https://schema.org/ImageObject">
                 <Link href={`/` + site.slug} className={styles.link}>
                     <Image
                         className={styles.img}
                         src={logoFail}
                         placeholder="blur"
-                        alt="csfail промокод"
+                        alt={"промокод " + site.siteName + " логотип"}
                         priority={true}
+                        itemprop="contentUrl"
                     />
                 </Link>
             </div>

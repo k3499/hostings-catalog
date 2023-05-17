@@ -1,4 +1,4 @@
-import {useRef, useState} from 'react';
+import { useRef, useState } from 'react';
 import styles from "./singleHead.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons"
@@ -33,7 +33,6 @@ export default function SingleHead({
   const [copyingStatus, setCopyingStatus] = useState(false)
 
   const copyToClipboard = (evt) => {
-    const copyButton = evt.currentTarget;
     let textToCopy = inputRef.current.value;
     navigator.clipboard.writeText(textToCopy)
     .then(() => {
@@ -52,6 +51,7 @@ export default function SingleHead({
       <div className={styles.swiper}>
         <Swiper {...swiperParameters}>
           {slides.data.map((slide) => {
+            console.log(slide)
             return (
               <SwiperSlide key={slide.id}>
                 <Image
@@ -59,6 +59,8 @@ export default function SingleHead({
                   loading="lazy"
                   loader={() => urlBuilder(slide)}
                   src={urlBuilder(slide)}
+                  alt={slide.attributes.alternativeText}
+                  title={slide.attributes.caption ? slide.attributes.caption: ""}
                   fill
                 />
               </SwiperSlide>
@@ -73,7 +75,7 @@ export default function SingleHead({
             loading="lazy"
             loader={() => urlBuilder(logo.data)}
             src={urlBuilder(logo.data)}
-            alt={siteName + "промокод"}
+            alt={siteName + " промокод"}
             fill
           />
         </div>
