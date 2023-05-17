@@ -1,3 +1,3 @@
 export function urlBuilder(url) {
-  return "http://api.besplatno-skin.com" + url.attributes.url
+  return "https://api.besplatno-skin.com" + url.attributes.url
 }
