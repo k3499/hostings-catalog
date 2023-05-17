@@ -1,6 +1,5 @@
 import {useRef, useState} from 'react';
 import styles from "./singleHead.module.css"
-import utils from "../../styles/utils.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -95,7 +94,7 @@ export default function SingleHead({
         <a
           href={link}
           target="_blank"
-          className={`${styles.link} ${utils.button}`}
+          className={`${styles.link} ${styles.button}`}
         >
           Получить бонус
         </a>

@@ -94,6 +94,16 @@
   object-fit: cover;
   border-radius: 0 10px 0 0;
 }
+.button{
+  background: linear-gradient(45deg, var(--purple) 20%, var(--blue) 100%);
+  padding: 9px 15px;
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all .4s ease-in-out;
+  background-size: 150% 150%;
+  cursor: pointer;
+}
 @media (max-width: 1099px) {
   .codeWrap{
     height: 285px;
@@ -140,8 +150,12 @@
   }
 }
 @media (max-width: 620px) {
+  .codeWrap {
+    height: 310px;
+  }
   .singleHead {
     flex-direction: column;
+    margin: 0 auto 25px;
   }
   .swiper {
     width: 100%;
@@ -162,6 +176,7 @@
   }
   .code {
     min-width: 50%;
+    margin: 0 auto 20px;
   }
   .money {
     font-size: 2rem;
@@ -171,5 +186,9 @@
   }
   .logo {
     border-radius: 8px;
+  }
+  .button{
+    padding: 15px 30px;
+    font-size: 1.1rem;
   }
 }
