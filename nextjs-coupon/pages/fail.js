@@ -8,6 +8,7 @@ import SingleBody from "../components/singleBody/singleBody"
 import Footer from "../components/footer/footer"
 import homeStyles from "../styles/Home.module.css"
 import Related from "../components/related/related"
+import { urlBuilder} from "../utils/utils"
 
 function fail({
   title,
@@ -33,7 +34,7 @@ function fail({
         <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={"https://api.besplatno-skin.com" + slides.data[0].attributes.url} />
+        <meta property="og:image" content={urlBuilder(slides.data[0])} />
         <meta property="og:site_name" content="Бесплатные скины КС ГО" />
         <meta name="title" content={title} />
         <meta name="description" content={description} />
@@ -42,7 +43,7 @@ function fail({
       <Header catList={catList}/>
       <div className={homeStyles.wrapper}>
         <Sidebar catList={catList}/>
-        <main className={homeStyles.main}>
+        <main className={homeStyles.main} itemscope itemtype="https://schema.org/Article">
           <SingleHead
             slides={slides}
             siteName={siteName}

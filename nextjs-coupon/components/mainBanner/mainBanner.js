@@ -2,6 +2,7 @@ import styles from './mainBanner.module.css';
 import { Russo_One } from 'next/font/google';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Pagination } from "swiper";
+import { urlBuilder } from "../../utils/utils"
 import "swiper/css";
 import "swiper/css/a11y";
 import "swiper/css/autoplay";
@@ -37,7 +38,7 @@ export default function MainBanner({ mainSlider }) {
                                     <a className={styles.link} href={element.attributes.link} target='_blank' >Получить Бонус</a>
                                 </div>
                             </div>
-                            <div className={`${styles.bannerImg} `} style={{ background: `url(https://api.besplatno-skin.com${element.attributes.image.data.attributes.url}) no-repeat`}}></div>
+                            <div className={`${styles.bannerImg} `} style={{ background: `url(${urlBuilder(element.attributes.image.data)}) no-repeat`}}></div>
                         </div>
                     </SwiperSlide>
                     );
