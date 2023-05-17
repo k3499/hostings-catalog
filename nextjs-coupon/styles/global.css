@@ -246,7 +246,7 @@ body {
 @media (max-width: 585px) {
   :root {
     --swiper-pagination-top: auto;
-    --swiper-pagination-bottom: 25px;
+    --swiper-pagination-bottom: 0;
   }
 }
 

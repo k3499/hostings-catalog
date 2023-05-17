@@ -45,7 +45,8 @@
     background: var(--bgsecond);
   }
   .title{
-    line-height: 150%;
-    margin: 32px 20px;
+    line-height: 130%;
+    font-size: 1.1rem;
+    margin: 25px 20px 10px;
   }
 }
