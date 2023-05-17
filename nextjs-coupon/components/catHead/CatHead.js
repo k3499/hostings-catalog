@@ -8,7 +8,7 @@ export default function CatHead({title, description, image}) {
         <div className={styles.banner}>
             <div className={styles.wrapper}>
                 <p className={`${styles.title}  ${russo.className}`}>{ title }</p>
-                <h1 className={`${styles.secondTitle} ${russo.className}`}>{ description }</h1>
+                <h1 className={`${styles.secondTitle}`}>{ description }</h1>
             </div>
             {image.data === null
             ? console.log("no category image")

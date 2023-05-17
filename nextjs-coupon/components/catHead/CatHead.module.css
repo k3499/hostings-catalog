@@ -10,11 +10,11 @@
     margin-bottom: 40px;
 }
 .wrapper{
-    max-width: 50%;
+    max-width: 47%;
 }
 .title{
     color: #211F2A;
-    font-size: 4.4rem;
+    font-size: 4.1rem;
     padding: 0;
     margin: 20px 0 40px;
     letter-spacing: 1px;
@@ -24,11 +24,12 @@
 }
 .secondTitle{
     color: #fff;
-    font-size: 1.3rem;
-    letter-spacing: 3px;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
     margin: 0;
     padding: 0;
     text-shadow: -4px 3px 0px rgb(82 70 179 / 55%);
+    line-height: 110%;
 }
 
 .bannerImg{
@@ -112,7 +113,7 @@
     .secondTitle {
       font-size: 0.9rem;
       font-weight: normal;
-      letter-spacing: 2px;
+      letter-spacing: 0;
       line-height: 130%;
     }
     .banner {
@@ -124,14 +125,16 @@
   @media (max-width: 405px) {
     .title {
       font-size: 1.7rem;
-      margin: 20px 0 18px;
+      margin: 10px 0 18px;
     }
     .secondTitle {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
+      line-height: 120%;
+      text-shadow: none;
     }
     .bannerImg {
       width: 190px;
-      height: 130px;
+      height: 154px;
       right: 10px;
       top: 10px;
     }
