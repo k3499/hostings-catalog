@@ -78,7 +78,6 @@ export default function SingleHead({
             alt={siteName + " промокод"}
             fill
           />
-          <meta itemprop="image" content={urlBuilder(logo.data)}></meta>
         </div>
         {promocode ? (
           <div className={styles.code}>

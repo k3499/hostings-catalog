@@ -43,7 +43,7 @@ function fail({
       <Header catList={catList}/>
       <div className={homeStyles.wrapper}>
         <Sidebar catList={catList}/>
-        <main className={homeStyles.main} itemscope itemtype="https://schema.org/Article">
+        <main className={homeStyles.main}>
           <SingleHead
             slides={slides}
             siteName={siteName}
