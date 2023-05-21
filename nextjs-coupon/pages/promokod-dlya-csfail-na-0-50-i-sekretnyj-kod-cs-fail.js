@@ -24,7 +24,6 @@ function fail({
   catList,
   related
 }) {
-  console.log(slides)
   return (
     <>
       <Head>
@@ -64,7 +63,7 @@ function fail({
 export async function getStaticProps() {
   try {
   const res = await axios.all([
-    axios.get('http://127.0.0.1:1337/api/sites-lists?filters[slug][$eq]=fail&populate=*'), 
+    axios.get('http://127.0.0.1:1337/api/sites-lists?filters[slug][$eq]=promokod-dlya-csfail-na-0-50-i-sekretnyj-kod-cs-fail&populate=*'), 
     axios.get('http://127.0.0.1:1337/api/categories/')
   ])
   .then(
