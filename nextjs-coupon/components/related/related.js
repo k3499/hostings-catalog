@@ -2,7 +2,7 @@ import styles from './related.module.css';
 import Card from '../card/card';
 import { useEffect, useState } from 'react';
 
-export default function Related({ related }) {
+export default function Related({ related}) {
     const [shuffleRelated, setShuffleRelated] = useState([]);
     
     function shuffle(array) {

@@ -5,9 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleInfo, faCopy, faCheck } from "@fortawesome/free-solid-svg-icons"
 import styles from './card.module.css'
 import utils from '../../styles/utils.module.css'
+import { urlBuilder} from "../../utils/utils"
 import logoFail from "/public/images/promokod-csfail.jpg"
 
-export default function Card({site}) {
+export default function Card({ site }) {
     const inputRef = useRef(null);
     const [copyingStatus, setCopyingStatus] = useState(false)
 
@@ -36,15 +37,15 @@ export default function Card({site}) {
             <a className={styles.info}>
                 <FontAwesomeIcon style={{fontSize:"15px"}} icon={faCircleInfo}></FontAwesomeIcon>
             </a>
-            <div className={styles.imgContainer} itemscope itemtype="https://schema.org/ImageObject">
+            <div className={styles.imgContainer}>
                 <Link href={`/` + site.slug} className={styles.link}>
                     <Image
                         className={styles.img}
-                        src={logoFail}
-                        placeholder="blur"
+                        loader={() => urlBuilder(site.logo.data)}
+                        src={urlBuilder(site.logo.data)}
                         alt={"промокод " + site.siteName + " логотип"}
                         priority={true}
-                        itemprop="contentUrl"
+                        fill
                     />
                 </Link>
             </div>

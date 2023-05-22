@@ -16,7 +16,7 @@
     color: #2D2C3A;
     font-weight: 500;
     padding: 7px 5px;
-    z-index: 0;
+    z-index: 2;
     border-radius: 5px 5px 0 5px;
     min-width: 45px;
     text-align: center;
@@ -27,6 +27,7 @@
     right: 18px;
     top: 22px;
     cursor: help;
+    z-index: 2;
 }
 .info:hover{
     color: #d8ff20;
@@ -36,6 +37,9 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
+    max-height: 100px;
+    height: 100%;
 }
 .link{
     margin-top: 5px;

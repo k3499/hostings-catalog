@@ -55,7 +55,6 @@ function fail({
           <Related related={related}/>
         </main>
       </div>
-      <Footer description={pageText}/>
     </>
   )
 }
@@ -75,7 +74,7 @@ export async function getStaticProps() {
     const singlePage = res.pageinfo;
     const relatedRes = await axios
       .get(
-        "http://127.0.0.1:1337/api/sites-lists?pagination[page]=1&pagination[pageSize]=10&filters[categories][slug][$eq]=" + singlePage.categories.data[0].attributes.slug
+        "http://127.0.0.1:1337/api/sites-lists?&populate=*&pagination[page]=1&pagination[pageSize]=10&filters[categories][slug][$eq]=" + singlePage.categories.data[0].attributes.slug
       )
       .then((res) => {
         const ralatedSites = res.data.data;
