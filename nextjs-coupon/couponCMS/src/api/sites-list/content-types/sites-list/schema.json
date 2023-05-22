@@ -57,7 +57,8 @@
     "order": {
       "type": "integer",
       "required": true,
-      "unique": false
+      "unique": false,
+      "default": 0
     },
     "description": {
       "type": "text",
