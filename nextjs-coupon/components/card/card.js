@@ -9,7 +9,6 @@ import { urlBuilder} from "../../utils/utils"
 import logoFail from "/public/images/promokod-csfail.jpg"
 
 export default function Card({ site }) {
-    console.log(site)
     const inputRef = useRef(null);
     const [copyingStatus, setCopyingStatus] = useState(false)
 
@@ -59,8 +58,8 @@ export default function Card({ site }) {
                 { site.promocode
                 ? <>
                     <div className={styles.promoCodeWrap}>
-                        <input className={styles.promoCode} type="text" value={site.promocode} readOnly ref={inputRef}/>
-                        <button className={styles.promoCopy}  onClick={copyToClipboard}>
+                        <input className={styles.promoCode} type="text" value={site.promocode} readOnly ref={inputRef} aria-label={site.siteName + "Промокод"}/>
+                        <button className={styles.promoCopy}  onClick={copyToClipboard} aria-label="Копировать промокод">
                             {copyingStatus 
                             ?<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCheck}></FontAwesomeIcon>
                             :<FontAwesomeIcon style={{fontSize:"20px"}} icon={faCopy}></FontAwesomeIcon>
