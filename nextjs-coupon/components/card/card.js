@@ -9,6 +9,7 @@ import { urlBuilder} from "../../utils/utils"
 import logoFail from "/public/images/promokod-csfail.jpg"
 
 export default function Card({ site }) {
+    console.log(site)
     const inputRef = useRef(null);
     const [copyingStatus, setCopyingStatus] = useState(false)
 

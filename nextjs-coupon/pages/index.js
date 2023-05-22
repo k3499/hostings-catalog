@@ -38,7 +38,7 @@ export async function getStaticProps(context) {
   try {
     const res = await axios.all([
         axios.get('http://127.0.0.1:1337/api/homepage'), 
-        axios.get('http://127.0.0.1:1337/api/sites-lists?sort[0]=order%3Aasc'),
+        axios.get('http://127.0.0.1:1337/api/sites-lists?sort[0]=order%3Aasc&populate=*'),
         axios.get('http://127.0.0.1:1337/api/categories'),
         axios.get('http://127.0.0.1:1337/api/main-banners?populate=image')
       ])
