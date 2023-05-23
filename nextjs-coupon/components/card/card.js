@@ -6,7 +6,6 @@ import { faCircleInfo, faCopy, faCheck } from "@fortawesome/free-solid-svg-icons
 import styles from './card.module.css'
 import utils from '../../styles/utils.module.css'
 import { urlBuilder} from "../../utils/utils"
-import logoFail from "/public/images/promokod-csfail.jpg"
 
 export default function Card({ site }) {
     const inputRef = useRef(null);
@@ -44,7 +43,7 @@ export default function Card({ site }) {
                         loader={() => urlBuilder(site.logo.data)}
                         src={urlBuilder(site.logo.data)}
                         alt={"промокод " + site.siteName + " логотип"}
-                        priority={true}
+                        priority
                         fill
                     />
                 </Link>
