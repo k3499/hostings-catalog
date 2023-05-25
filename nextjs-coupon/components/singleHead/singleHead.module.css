@@ -85,7 +85,7 @@
 }
 .logoContainer {
   max-width: 201px;
-  max-height: 100px;
+  max-height: 88px;
   height: 100%;
   width: 100%;
   position: relative;
@@ -102,12 +102,12 @@
   transition: all .4s ease-in-out;
   background-size: 150% 150%;
   cursor: pointer;
-  background: #1f1e24;
+  background: #2d2c3a;
   border: 1px solid #31313d;
   padding: 12px 15px;
   font-size: 1.1rem;
   margin-top: 16px;
-  color: #9997b3;
+  color: #edecf7;
 }
 @media (max-width: 1099px) {
   .codeWrap{

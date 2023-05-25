@@ -19,6 +19,10 @@
 .text p{
     margin: 0 0 1em;
 }
+.text p strong{
+    color: #fff;
+    font-weight: bold;
+}
 .text a{
     background: linear-gradient(45deg, #baaafd 20%, var(--blue) 90%);
     -webkit-background-clip: text;
