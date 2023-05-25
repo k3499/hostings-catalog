@@ -23,7 +23,9 @@ function Home({ title, description, homePageText, siteList, catList, mainSlider 
       <div className={homeStyles.wrapper}>
         <Sidebar catList={catList}/>
         <main className={homeStyles.main}>
-          <MainBanner mainSlider={mainSlider}/>
+          <div className={homeStyles.mainSliderWrapper}>
+            <MainBanner mainSlider={mainSlider}/>
+          </div>
           <h1 className={homeStyles.title}>Бесплатные скины КС ГО</h1>
           <div className={homeStyles.hr}></div>
           <Popular siteList={siteList}/>
