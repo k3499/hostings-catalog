@@ -17,6 +17,7 @@ function Home({ title, description, homePageText, siteList, catList, mainSlider 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name='title' content={title} />
         <meta name='description' content={description} />
+        <link rel="canonical" href="https://besplatno-skin.com/"/>
         <title>{title}</title>
       </Head>
       <Header catList={catList} />
