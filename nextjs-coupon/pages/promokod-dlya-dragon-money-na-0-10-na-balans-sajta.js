@@ -5,7 +5,6 @@ import Header from "../components/header/header"
 import Sidebar from "../components/sidebar/sidebar"
 import SingleHead from "../components/singleHead/singlehead"
 import SingleBody from "../components/singleBody/singleBody"
-import Footer from "../components/footer/footer"
 import homeStyles from "../styles/Home.module.css"
 import Related from "../components/related/related"
 import { urlBuilder} from "../utils/utils"
@@ -62,7 +61,7 @@ function fail({
 export async function getStaticProps() {
   try {
   const res = await axios.all([
-    axios.get('http://127.0.0.1:1337/api/sites-lists?filters[slug][$eq]=promokod-dlya-csfail-na-0-50-i-sekretnyj-kod-cs-fail&populate=*'), 
+    axios.get('http://127.0.0.1:1337/api/sites-lists?filters[slug][$eq]=promokod-dlya-dragon-money-na-0-10-na-balans-sajta&populate=*'), 
     axios.get('http://127.0.0.1:1337/api/categories/')
   ])
   .then(
