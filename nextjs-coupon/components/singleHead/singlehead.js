@@ -51,7 +51,6 @@ export default function SingleHead({
       <div className={styles.swiper}>
         <Swiper {...swiperParameters}>
           {slides.data.map((slide) => {
-            console.log(slide)
             return (
               <SwiperSlide key={slide.id}>
                 <Image
