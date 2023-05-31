@@ -60,6 +60,7 @@ export default function SingleHead({
                   alt={slide.attributes.alternativeText}
                   title={slide.attributes.caption ? slide.attributes.caption: ""}
                   fill
+                  priority={true}
                 />
               </SwiperSlide>
             )
@@ -74,6 +75,7 @@ export default function SingleHead({
             src={urlBuilder(logo.data)}
             alt={siteName + " промокод"}
             fill
+            priority={true}
           />
         </div>
         {promocode ? (
