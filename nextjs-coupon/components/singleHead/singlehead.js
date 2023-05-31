@@ -70,7 +70,6 @@ export default function SingleHead({
         <div className={styles.logoContainer}>
           <Image
             className={styles.logo}
-            loading="lazy"
             loader={() => urlBuilder(logo.data)}
             src={urlBuilder(logo.data)}
             alt={siteName + " промокод"}
