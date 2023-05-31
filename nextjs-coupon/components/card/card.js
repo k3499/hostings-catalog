@@ -45,6 +45,7 @@ export default function Card({ site }) {
                         alt={"промокод " + site.siteName + " логотип"}
                         priority
                         fill
+                        unoptimized={true} 
                     />
                 </Link>
             </div>
