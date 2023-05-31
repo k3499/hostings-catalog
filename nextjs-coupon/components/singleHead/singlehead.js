@@ -55,7 +55,6 @@ export default function SingleHead({
               <SwiperSlide key={slide.id}>
                 <Image
                   className={styles.swiperSlideImage}
-                  loading="lazy"
                   loader={() => urlBuilder(slide)}
                   src={urlBuilder(slide)}
                   alt={slide.attributes.alternativeText}
