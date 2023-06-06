@@ -1,8 +1,11 @@
 import styles from "./form.module.css"
+import React, { useState } from 'react';
 import axios from 'axios'
 import { useFormWithValidation } from '../../utils/formValidation';
 
 export default function form({onSend}) {
+
+  const [isRegisterFailed, setIsRegisterFailed] = useState(false);
 
   const {
     values,
@@ -20,19 +23,17 @@ export default function form({onSend}) {
       promokode: evt.target.promokode.value,
       description: evt.target.description.value,
     };
-    const JSONdata = JSON.stringify({data});
 
     const endpoint = 'http://localhost:1337/api/form-requests';
     
     axios.post(endpoint, { data })
     .then((res) => {
       if (res) {
-        // setIsRegisterFailed(false);
+        setIsRegisterFailed(false);
         // openInfoPopup(registerSuccessMessage);
-        // handleLogin({ email, password });
         res.json()
       } else {
-        // setIsRegisterFailed(true);
+        setIsRegisterFailed(true);
         // openInfoPopup(failMessage);
         console.log("не получили данные ")
       }
@@ -50,15 +51,18 @@ export default function form({onSend}) {
 
   return (
     <form method="post" onSubmit={sendForm} noValidate>
-        { errors }
+        { console.log(errors) }
       <label htmlFor="email">Email</label>
       <input onChange={handleChange} type="email" id="email" name="email" required />
       <span id="name-input-error">
-            {errors && errors.name && errors.name}
+        {errors && errors.email && errors.email}
       </span>
       
       <label htmlFor="sitename">sitename</label>
-      <input type="text" id="sitename" name="sitename" required />
+      <input onChange={handleChange} type="text" id="sitename" name="sitename" required />
+      <span id="name-input-error">
+        {errors && errors.sitename && errors.sitename}
+      </span>
 
       <label htmlFor="link">link</label>
       <input type="text" id="link" name="link" required />
