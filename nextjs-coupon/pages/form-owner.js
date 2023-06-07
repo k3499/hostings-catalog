@@ -7,11 +7,7 @@ import Form from "../components/form/form"
 import homeStyles from "../styles/Home.module.css"
 import Footer from '../components/footer/footer'
 
-function Home({ title, description, homePageText, catList}) {
-
-  const handleFormSend = ({email, sitename, link, promokode, description}) => {
-    console.log(email)
-  }
+function Home({ handleSendForm, title, description, homePageText, catList}) {
 
   return (
     <>
@@ -31,7 +27,7 @@ function Home({ title, description, homePageText, catList}) {
         <main className={homeStyles.main}>
           <h1 className={homeStyles.title}>Бесплатные скины КС ГО</h1>
           <div className={homeStyles.hr}></div>
-          <Form onSend={handleFormSend}/>
+          <Form handleSendForm={handleSendForm}/>
         </main>
       </div>
       <Footer description={homePageText}/>

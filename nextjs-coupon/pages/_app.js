@@ -1,7 +1,9 @@
 import { useState } from "react"
 import { config } from "@fortawesome/fontawesome-svg-core"
+import axios from 'axios'
 import localFont from "next/font/local"
 import SitesContext from "../components/SitesContext/SitesContext"
+import Popup from '../components/popup/popup';
 import "../styles/normalize.css"
 import "../styles/global.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
@@ -11,7 +13,13 @@ const golos = localFont({ src: "./fonts/GolosText-VariableFont_wght.ttf" })
 
 function MyApp({ Component, pageProps }) {
   const [mobileMenu, setMobileMenu] = useState(false)
+  const [isInfoPopupOpen, setIsInfoPopupOpen] = useState(false);
+  const [popupMessage, setPopupMessage] = useState('');
+  
+  const formSuccessMessage = "Сайт отправлен на проверку. Спасибо за обращение.";
+  const formFailMessage = "Сайт отправлен на проверку. Спасибо за обращение.";
 
+  // мобильное меню
   function handleMobileMenu() {
     if (mobileMenu) {
       setMobileMenu(false)
@@ -19,29 +27,75 @@ function MyApp({ Component, pageProps }) {
     }
     setMobileMenu(true)
   }
+  //popup
+  const openInfoPopup = (message) => {
+    setPopupMessage(message);
+    setIsInfoPopupOpen(true);
+  };
+  // закрыть все попапы
+  const closeAllPopups = () => {
+    setMobileMenu(false);
+    setIsInfoPopupOpen(false);
 
-  const sites = {
-    csfail: {
-      title: "CSFAIL",
-    },
-    csgopolygon: {
-      title: "CSGOPOLYGON",
-    },
-    csgopositive: {
-      title: "csgopositive",
-    },
-  }
+  };
+  
+  // esc закрыть
+  const handleEscClose = (event) => {
+    if (event.key === 'Escape') {
+      closeAllPopups();
+    }
+  };
+  // закрытие попапов по клику по оверлею
+  const handleCLosePopupByClickOnOverlay = (event) => {
+    if (event.target !== event.currentTarget) {
+      return;
+    }
+    closeAllPopups();
+  };
+  
+  const handleSendForm = async (evt) => {
+    evt.preventDefault();
+    const data = {
+      email: evt.target.email.value,
+      sitename: evt.target.sitename.value,
+      link: evt.target.link.value,
+      promokode: evt.target.promokode.value,
+      description: evt.target.description.value,
+    };
+
+    const endpoint = 'http://localhost:1337/api/form-requests';
+    
+      axios.post(endpoint, { data })
+      .then((res) => {
+        if (res) {
+          openInfoPopup(formSuccessMessage);
+          evt.target.reset();
+        } else {
+          openInfoPopup(formFailMessage);
+          console.log("не получили данные ")
+        }
+      })
+      .then(data => console.log(data))
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
 
   return (
     
     <div className={golos.className}>
-      <SitesContext.Provider value={{ sites: sites }}>
+      
         <Component
           {...pageProps}
           mobileMenu={mobileMenu}
           handleMobileMenu={handleMobileMenu}
+          handleSendForm={handleSendForm}
         />
-      </SitesContext.Provider>
+        <Popup
+          closePopup={closeAllPopups}
+          isOpen={isInfoPopupOpen}
+          message={popupMessage}
+          onClick={handleCLosePopupByClickOnOverlay} />
     </div>
   )
 }
