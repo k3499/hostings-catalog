@@ -60,6 +60,7 @@ function MyApp({ Component, pageProps }) {
       sitename: evt.target.sitename.value,
       link: evt.target.link.value,
       promokode: evt.target.promokode.value,
+      owner: evt.target.owner.checked,
       description: evt.target.description.value,
     };
 

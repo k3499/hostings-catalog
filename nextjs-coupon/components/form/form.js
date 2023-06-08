@@ -43,6 +43,11 @@ export default function form({handleSendForm}) {
       </div>
 
       <div className={styles.inputBlock}>
+        <label className={styles.label} htmlFor="owner">Вы владелец сайта?</label>
+        <input type="checkbox" id="owner" name="owner"></input>
+      </div>     
+
+      <div className={styles.inputBlock}>
         <label className={styles.label} htmlFor="description">Комментарий</label>
         <textarea className={styles.inputDesc} onChange={handleChange} maxlength="400" type="text" id="description" name="description" />
       </div>

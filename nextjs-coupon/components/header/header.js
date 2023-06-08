@@ -52,9 +52,9 @@ export default function Header({ slug, catList }) {
           Be Skin
         </Link>
         <nav className={styles.topMenu}>
-          <a href="#" className={styles.button}>
+          <Link className={styles.button} href="/form-owner">
             Добавить сайт
-          </a>
+          </Link>
           <a
             onClick={handleMobileMenuClick}
             href="/"
