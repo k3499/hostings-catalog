@@ -15,29 +15,39 @@ export default function form({handleSendForm}) {
       handleSendForm(evt);
     }
   };
-
+  
   return (
-    <form method="post" onSubmit={onSubmit} noValidate>
-        { console.log(errors) }
-      <label htmlFor="email">Email</label>
-      <input onChange={handleChange} type="email" id="email" name="email" />
-      <span id="name-input-error">
-        {errors && errors.email && errors.email}
-      </span>
+    <form method="post" onSubmit={onSubmit} noValidate  className={styles.formTextRight}>
       
-      <label htmlFor="sitename">sitename</label>
-      <input onChange={handleChange} type="text" id="sitename" name="sitename" required />
+      <div className={styles.inputBlock}>
+        <label className={styles.label} htmlFor="email">E-mail*</label>
+        <input className={`${styles.input} ${errors && errors.email && styles.inputError}`} onChange={handleChange} type="email" id="email" name="email" required />
+        <span className={styles.error} id="name-input-error">
+          {errors && errors.email && errors.email}
+        </span>
+      </div>
 
-      <label htmlFor="link">link</label>
-      <input onChange={handleChange} type="text" id="link" name="link" required />
+      <div className={styles.inputBlock}>
+        <label className={styles.label} htmlFor="sitename">Название сайта*</label>
+        <input className={styles.input} onChange={handleChange} type="text" id="sitename" name="sitename" required />
+      </div>
 
-      <label htmlFor="promokode">promokode</label>
-      <input onChange={handleChange} type="text" id="promokode" name="promokode" />
+      <div className={styles.inputBlock}>
+        <label className={styles.label} htmlFor="link">Ссылка на сайт*</label>
+        <input className={styles.input} onChange={handleChange} type="text" id="link" name="link" required />
+      </div>
 
-      <label htmlFor="description">description</label>
-      <input onChange={handleChange} type="text" id="description" name="description" />
+      <div className={styles.inputBlock}>
+        <label className={styles.label} htmlFor="promokode">Промокод</label>
+        <input className={styles.input} onChange={handleChange} type="text" id="promokode" name="promokode" />
+      </div>
 
-      <button type="submit" disabled={!isValid}>Submit</button>
+      <div className={styles.inputBlock}>
+        <label className={styles.label} htmlFor="description">Комментарий</label>
+        <textarea className={styles.inputDesc} onChange={handleChange} maxlength="400" type="text" id="description" name="description" />
+      </div>
+
+      <button className={styles.button} type="submit" disabled={!isValid}>Отправить</button>
     </form>
   )
 }

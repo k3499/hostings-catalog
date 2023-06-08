@@ -5,6 +5,7 @@ import Header from "../components/header/header"
 import Sidebar from "../components/sidebar/sidebar"
 import Form from "../components/form/form"
 import homeStyles from "../styles/Home.module.css"
+import formStyles from "../styles/Form.module.css"
 import Footer from '../components/footer/footer'
 
 function Home({ handleSendForm, title, description, homePageText, catList}) {
@@ -25,9 +26,21 @@ function Home({ handleSendForm, title, description, homePageText, catList}) {
       <div className={homeStyles.wrapper}>
         <Sidebar catList={catList}/>
         <main className={homeStyles.main}>
-          <h1 className={homeStyles.title}>Бесплатные скины КС ГО</h1>
-          <div className={homeStyles.hr}></div>
-          <Form handleSendForm={handleSendForm}/>
+          <section className={formStyles.wrapper}>
+            <div className={formStyles.formTextLeft}>
+              <h1 className={formStyles.title}>Предложить сайт</h1>
+              <div className={formStyles.text}>
+                <p>Если вы знаете отличный сайт, который соответствует тематике 
+                  нашего каталога, то можете предложить его к добавлению на сайт.
+                  К сожалению, мы не обещаем опубликовать каждый сайт, отправленный нам
+                  на проверку.</p>
+
+                  <p>Если вы владелец сайта, то воспользуйтесь этой формой. За небольшую сумму 
+                  можете добавить сайт со 100% вероятность или разместь рекламный блок.</p>
+              </div>
+            </div>
+            <Form handleSendForm={handleSendForm}/>
+          </section>
         </main>
       </div>
       <Footer description={homePageText}/>
