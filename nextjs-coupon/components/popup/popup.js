@@ -1,4 +1,6 @@
 import styles from "./popup.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faXmark } from "@fortawesome/free-solid-svg-icons"
 
 export default function Popup({
   closePopup,
@@ -10,7 +12,7 @@ export default function Popup({
   return (
     <section className={`${styles.popup} ${isOpen && styles.opened}`} onClick={onClick}>
       <div className={styles.container}>
-        <button className={styles.close} type="button" onClick={closePopup}></button>
+        <button className={styles.close} type="button" onClick={closePopup}><FontAwesomeIcon style={{fontSize:"15px"}} icon={faXmark}></FontAwesomeIcon></button>
         <p className={styles.message}>{message}</p>
       </div>
     </section>

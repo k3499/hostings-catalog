@@ -14,3 +14,30 @@
   margin-bottom: 30px;
   font-size: 1.1rem;
 }
+@media (max-width: 1050px) {
+  .wrapper{
+    gap: 0;
+  }
+  .title{
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 850px) {
+  .wrapper{
+    gap: 40px;
+  }
+}
+@media (max-width: 650px) {
+  .wrapper{
+    gap: 40px;
+    flex-direction: column;
+  }
+  .formTextLeft {
+    width: 100%;
+  }
+}
+@media (max-width: 494px) {
+  .wrapper{
+    padding: 0 20px;
+  }
+}

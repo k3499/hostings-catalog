@@ -5,16 +5,33 @@
   height: 100%;
   top: 0;
   left: 0;
+  background: #000000af;
 }
 .container{
   position: absolute;
-  min-width: 320px;
+  width: 520px;
   min-height: 280px;
   background: #6672ed;
-  top: 25%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  border-radius: 4px; 
+}
+.container p{
+  font-size: 1.3rem;
+  line-height: 120%;
 }
 .opened{
   display: block;
+}
+.close{
+  position: absolute;
+  right: -22px;
+  top: -19px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
