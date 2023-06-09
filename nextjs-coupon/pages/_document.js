@@ -38,6 +38,19 @@ export default function Document() {
             <img src="https://mc.yandex.ru/watch/93789546" style={{ position:'absolute', left:'-9999px' }} alt="" />
           </div>
         </noscript>
+        <script
+          src="https://www.googletagmanager.com/gtag/js?id=G-MZHM56Z59G"
+          strategy="afterInteractive"
+        />
+        <script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'GA_MEASUREMENT_ID');
+        `}
+        </script>
         <Main />
         <NextScript />
       </body>
