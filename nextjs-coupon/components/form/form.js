@@ -43,8 +43,8 @@ export default function form({handleSendForm}) {
       </div>
 
       <div className={styles.inputBlock}>
-        <label className={styles.label} htmlFor="owner">Вы владелец сайта?</label>
-        <input type="checkbox" id="owner" name="owner"></input>
+        <input name="owner" id="owner" type="checkbox" className={styles.checkbox}></input>
+		    <label for="owner">Вы владелец сайта?</label>
       </div>     
 
       <div className={styles.inputBlock}>

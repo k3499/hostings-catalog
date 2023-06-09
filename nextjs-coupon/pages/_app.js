@@ -64,7 +64,8 @@ function MyApp({ Component, pageProps }) {
       description: evt.target.description.value,
     };
 
-    const endpoint = 'https://api.besplatno-skin.com/api/form-requests';
+    const endpoint = 'http://localhost:1337/api/form-requests';
+    // const endpoint = 'https://api.besplatno-skin.com/api/form-requests';
     
       axios.post(endpoint, { data })
       .then((res) => {
@@ -76,7 +77,6 @@ function MyApp({ Component, pageProps }) {
           console.log("не получили данные ")
         }
       })
-      .then(data => console.log(data))
       .catch((err) => {
         console.log(err.message);
       });
