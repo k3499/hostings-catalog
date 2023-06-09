@@ -64,7 +64,7 @@ function MyApp({ Component, pageProps }) {
       description: evt.target.description.value,
     };
 
-    const endpoint = 'http://localhost:1337/api/form-requests';
+    const endpoint = 'https://api.besplatno-skin.com/api/form-requests';
     
       axios.post(endpoint, { data })
       .then((res) => {
