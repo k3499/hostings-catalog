@@ -18,7 +18,7 @@ function Home({ title, description, homePageText, siteList, catList, mainSlider 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name='title' content={title} />
         <meta name='description' content={description} />
-        <link rel="canonical" href="https://besplatno-skin.com/"/>
+        <link rel="canonical" href=""/>
         <title>{title}</title>
       </Head>
       <Header catList={catList} />
@@ -28,7 +28,7 @@ function Home({ title, description, homePageText, siteList, catList, mainSlider 
           <div className={homeStyles.mainSliderWrapper}>
             <MainBanner mainSlider={mainSlider}/>
           </div>
-          <h1 className={homeStyles.title}>Бесплатные скины КС ГО</h1>
+          <h1 className={homeStyles.title}>Промокоды для хостинга</h1>
           <div className={homeStyles.hr}></div>
           <Popular siteList={siteList}/>
         </main>
@@ -41,10 +41,10 @@ function Home({ title, description, homePageText, siteList, catList, mainSlider 
 export async function getStaticProps(context) {
   try {
     const res = await axios.all([
-        axios.get('http://127.0.0.1:1337/api/homepage'), 
-        axios.get('http://127.0.0.1:1337/api/sites-lists?sort[0]=order%3Aasc&populate=logo&populate=slides'),
-        axios.get('http://127.0.0.1:1337/api/categories'),
-        axios.get('http://127.0.0.1:1337/api/main-banners?populate=image')
+        axios.get('http://127.0.0.1:1338/api/homepage'), 
+        axios.get('http://127.0.0.1:1338/api/sites-lists?sort[0]=order%3Aasc&populate=logo&populate=slides'),
+        axios.get('http://127.0.0.1:1338/api/categories'),
+        axios.get('http://127.0.0.1:1338/api/main-banners?populate=image')
       ])
       .then(axios.spread((home, sites, categoryAll, slider) => {
         const homePage = home.data.data.attributes;

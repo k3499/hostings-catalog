@@ -16,9 +16,9 @@ function Home({siteList, catList }) {
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name='title' content="Страница не найдена | besplatno skin" />
-        <meta name='description' content="К сожалению страница не найдена | besplatno skin" />
-        <title>Страница не найдена | besplatno skin</title>
+        <meta name='title' content="Страница не найдена | Промокоды для хостинга" />
+        <meta name='description' content="К сожалению страница не найдена | Промокоды для хостинга" />
+        <title>Страница не найдена | Промокоды для хостинга</title>
       </Head>
       <Header catList={catList} />
       <div className={homeStyles.wrapper}>

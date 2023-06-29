@@ -33,7 +33,7 @@ function fail({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={urlBuilder(slides.data[0])} />
-        <meta property="og:site_name" content="Бесплатные скины КС ГО" />
+        <meta property="og:site_name" content="Промокоды для хостинга" />
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <title>{title}</title>
