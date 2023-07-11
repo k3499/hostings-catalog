@@ -23,7 +23,6 @@ function fail({
   catList,
   related
 }) {
-  console.log(title)
   return (
     <>
       <Head>
@@ -82,7 +81,6 @@ export async function getStaticProps() {
         return { ralatedSites }
       })
 
-      console.log(singlePage)
 const catList = res.categoryList;
 const pageTextMDX = singlePage.text;
 const related = relatedRes.ralatedSites;
