@@ -64,8 +64,8 @@ function MyApp({ Component, pageProps }) {
       description: evt.target.description.value,
     };
 
-    // const endpoint = 'http://localhost:1338/api/form-requests';
-    const endpoint = 'https://api.hostoncoast.ru/api/form-requests';
+    const endpoint = 'http://localhost:1338/api/form-requests';
+    // const endpoint = 'https://api.hostoncoast.ru/api/form-requests';
     
       axios.post(endpoint, { data })
       .then((res) => {

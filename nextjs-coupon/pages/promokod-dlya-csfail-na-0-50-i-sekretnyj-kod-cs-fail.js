@@ -23,6 +23,7 @@ function fail({
   catList,
   related
 }) {
+  console.log(title)
   return (
     <>
       <Head>
@@ -33,7 +34,7 @@ function fail({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={urlBuilder(slides.data[0])} />
-        <meta property="og:site_name" content="Промокоды для хостинга" />
+        <meta property="og:site_name" content="Бесплатные скины КС ГО" />
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <title>{title}</title>
@@ -61,8 +62,8 @@ function fail({
 export async function getStaticProps() {
   try {
   const res = await axios.all([
-    axios.get('http://127.0.0.1:1337/api/sites-lists?filters[slug][$eq]=promokod-dlya-csfail-na-0-50-i-sekretnyj-kod-cs-fail&populate=*'), 
-    axios.get('http://127.0.0.1:1337/api/categories/')
+    axios.get('http://127.0.0.1:1338/api/sites-lists?filters[slug][$eq]=promokod-dlya-csfail-na-0-50-i-sekretnyj-kod-cs-fail&populate=*'), 
+    axios.get('http://127.0.0.1:1338/api/categories/')
   ])
   .then(
     axios.spread((page, categoryAll) => {
@@ -71,16 +72,17 @@ export async function getStaticProps() {
       return {pageinfo, categoryList} 
     }))
     const singlePage = res.pageinfo;
+    console.log(singlePage.categories.data[0])
     const relatedRes = await axios
       .get(
-        "http://127.0.0.1:1337/api/sites-lists?&populate=logo&pagination[page]=1&pagination[pageSize]=10&filters[categories][slug][$eq]=" + singlePage.categories.data[0].attributes.slug
+        "http://127.0.0.1:1338/api/sites-lists?&populate=logo&pagination[page]=1&pagination[pageSize]=10&filters[categories][slug][$eq]=" + singlePage.categories.data[0].attributes.slug
       )
       .then((res) => {
         const ralatedSites = res.data.data;
         return { ralatedSites }
       })
 
-
+      console.log(singlePage)
 const catList = res.categoryList;
 const pageTextMDX = singlePage.text;
 const related = relatedRes.ralatedSites;

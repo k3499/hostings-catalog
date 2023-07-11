@@ -45,7 +45,7 @@ export default function Category({ title, image, slug, headDesc, customTitle, de
 
 
 export async function getStaticPaths() {
-    const res = await axios.get("http://127.0.0.1:1337/api/categories");
+    const res = await axios.get("http://127.0.0.1:1338/api/categories");
     const data = res.data.data;
 
     const paths = data.map((item) => ({
@@ -59,9 +59,9 @@ export async function getStaticProps(ctx) {
     try {
         const { slug } = ctx.params;
         const res = await axios.all([
-          axios.get('http://127.0.0.1:1337/api/categories/?populate=image&filters[slug][$eq]=' + slug), 
-          axios.get('http://127.0.0.1:1337/api/sites-lists?populate=logo&populate=slides&sort[0]=order%3Aasc&filters[$and][0][categories][slug][$eq]='+ slug),
-          axios.get('http://127.0.0.1:1337/api/categories/')
+          axios.get('http://127.0.0.1:1338/api/categories/?populate=image&filters[slug][$eq]=' + slug), 
+          axios.get('http://127.0.0.1:1338/api/sites-lists?populate=logo&populate=slides&sort[0]=order%3Aasc&filters[$and][0][categories][slug][$eq]='+ slug),
+          axios.get('http://127.0.0.1:1338/api/categories/')
         ])
         .then(axios.spread((category, sites, categoryAll) => {
           const categoryPage = category.data.data[0].attributes;

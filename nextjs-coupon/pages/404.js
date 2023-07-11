@@ -39,8 +39,8 @@ function Home({siteList, catList }) {
 export async function getStaticProps(context) {
   try {
     const res = await axios.all([
-        axios.get('http://127.0.0.1:1337/api/sites-lists?sort[0]=order%3Aasc&populate=logo&populate=slides'),
-        axios.get('http://127.0.0.1:1337/api/categories')
+        axios.get('http://127.0.0.1:1338/api/sites-lists?sort[0]=order%3Aasc&populate=logo&populate=slides'),
+        axios.get('http://127.0.0.1:1338/api/categories')
       ])
       .then(axios.spread(( sites, categoryAll) => {
         const siteList = sites.data.data;
