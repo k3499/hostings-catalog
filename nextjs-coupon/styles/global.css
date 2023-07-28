@@ -81,157 +81,102 @@ body {
   margin-right: 10px;
   border-radius: 3px;
 }
-.menu__crash-csgo::before {
+.menu__servers::before {
   content: "";
-  background: url(/images/crash.png) no-repeat 50%;
+  background: url(/images/servers.png) no-repeat 50%;
   width: 19px;
   height: 25px;
   transition: all 0.2s ease 0s;
 }
-.menu__crash-csgo:hover::before {
-  background: url(/images/crash-active.png) no-repeat 50%;
+.menu__servers:hover::before {
+  background: url(/images/servers-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.menu__crash-csgo-active::before {
-  background: url(/images/crash-active.png) no-repeat 50%;
+.menu__servers-active::before {
+  background: url(/images/servers-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
 }
-.menu__jackpot-csgo::before {
+.menu__vps::before {
   content: "";
-  background: url(/images/jackpot.png) no-repeat 50%;
+  background: url(/images/vps.png) no-repeat 50%;
   width: 19px;
   height: 25px;
   transition: all 0.2s ease 0s;
 }
-.menu__jackpot-csgo-active::before {
-  background: url(/images/jackpot-active.png) no-repeat 50%;
+.menu__vps-active::before {
+  background: url(/images/vps-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
 }
-.menu__jackpot-csgo:hover::before {
-  background: url(/images/jackpot-active.png) no-repeat 50%;
+.menu__vps:hover::before {
+  background: url(/images/vps-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.menu__krasnoe-chernoe-zelenoe-csgo::before {
+.menu__hosting::before {
   content: "";
-  background: url(/images/3color.png) no-repeat 50%;
+  background: url(/images/hosting.png) no-repeat 50%;
   width: 19px;
   height: 25px;
 }
-.menu__krasnoe-chernoe-zelenoe-csgo-active::before {
-  background: url(/images/3color-active.png) no-repeat 50%;
-  color: #e3e4f8;
-  -webkit-text-fill-color: #e3e4f8;
-  transition: all 0.2s ease 0s;
-}
-.menu__krasnoe-chernoe-zelenoe-csgo:hover::before {
-  background: url(/images/3color-active.png) no-repeat 50%;
-  transition: all 0.2s ease 0s;
-}
-.menu__chetyre-czveta::before {
-  content: "";
-  background: url(/images/4color.png) no-repeat 50%;
-  width: 19px;
-  height: 25px;
-}
-.menu__chetyre-czveta-active::before {
-  background: url(/images/4color-active.png) no-repeat 50%;
+.menu__hosting-active::before {
+  background: url(/images/hosting-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
-.menu__chetyre-czveta:hover::before {
-  background: url(/images/4color-active.png) no-repeat 50%;
+.menu__hosting:hover::before {
+  background: url(/images/hosting-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.menu__kejsy-csgo::before {
+.menu__domain::before {
   content: "";
-  background: url(/images/box.png) no-repeat 50%;
+  background: url(/images/domain.png) no-repeat 50%;
   width: 19px;
   height: 25px;
 }
-.menu__kejsy-csgo-active::before {
-  background: url(/images/box-active.png) no-repeat 50%;
+.menu__domain-active::before {
+  background: url(/images/domain-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
-.menu__kejsy-csgo:hover::before {
-  background: url(/images/box-active.png) no-repeat 50%;
+.menu__domain:hover::before {
+  background: url(/images/domain-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.menu__sloty::before {
+.menu__cloud::before {
   content: "";
-  background: url(/images/slots.png) no-repeat 50%;
+  background: url(/images/cloud.png) no-repeat 50%;
   width: 19px;
   height: 25px;
 }
-.menu__sloty-active::before {
-  background: url(/images/slots-active.png) no-repeat 50%;
+.menu__cloud-active::before {
+  background: url(/images/cloud-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
-.menu__sloty:hover::before {
-  background: url(/images/slots-active.png) no-repeat 50%;
+.menu__cloud:hover::before {
+  background: url(/images/cloud-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.menu__stavki-na-sport::before {
+.menu__vpn::before {
   content: "";
-  background: url(/images/sport.png) no-repeat 50%;
+  background: url(/images/vpn.png) no-repeat 50%;
   width: 19px;
   height: 25px;
 }
-.menu__stavki-na-sport-active::before {
-  background: url(/images/sport-active.png) no-repeat 50%;
+.menu__vpn-active::before {
+  background: url(/images/vpn-active.png) no-repeat 50%;
   color: #e3e4f8;
   -webkit-text-fill-color: #e3e4f8;
   transition: all 0.2s ease 0s;
 }
-.menu__stavki-na-sport:hover::before {
-  background: url(/images/sport-active.png) no-repeat 50%;
-  width: 19px;
-  height: 25px;
+.menu__vpn:hover::before {
+  background: url(/images/vpn-active.png) no-repeat 50%;
   transition: all 0.2s ease 0s;
 }
-.menu__obmenniki-skinov-csgo::before {
-  content: "";
-  background: url(/images/obmen.png) no-repeat 50%;
-  width: 19px;
-  height: 25px;
-}
-.menu__obmenniki-skinov-csgo-active::before {
-  background: url(/images/obmen-active.png) no-repeat 50%;
-  color: #e3e4f8;
-  -webkit-text-fill-color: #e3e4f8;
-  transition: all 0.2s ease 0s;
-}
-.menu__obmenniki-skinov-csgo:hover::before {
-  background: url(/images/obmen-active.png) no-repeat 50%;
-  width: 19px;
-  height: 25px;
-  transition: all 0.2s ease 0s;
-}
-.menu__kriptovalyutnye-ruletki-i-kazino::before {
-  content: "";
-  background: url(/images/cripto.png) no-repeat 50%;
-  width: 19px;
-  height: 25px;
-}
-.menu__kriptovalyutnye-ruletki-i-kazino-active::before {
-  background: url(/images/cripto-active.png) no-repeat 50%;
-  color: #e3e4f8;
-  -webkit-text-fill-color: #e3e4f8;
-  transition: all 0.2s ease 0s;
-}
-.menu__kriptovalyutnye-ruletki-i-kazino:hover::before {
-  background: url(/images/cripto-active.png) no-repeat 50%;
-  width: 19px;
-  height: 25px;
-  transition: all 0.2s ease 0s;
-}
-
 
 @media (max-width: 1099px) {
   .swiper {
