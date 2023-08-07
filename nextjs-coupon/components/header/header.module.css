@@ -40,11 +40,11 @@
   gap: 20px;
 }
 /*mobile menu*/
-.mobileMenu{
+.mobileMenu {
   display: none;
   background: var(--bgmain);
   height: 0;
-  transform: translate(0,-50%)scaleY(0);
+  transform: translate(0, -50%) scaleY(0);
   transition: 0.25s;
   width: 100%;
   margin-bottom: 13px;
@@ -74,7 +74,7 @@
 }
 @media (max-width: 625px) {
   .logo {
-    background: url(/images/logo-mobile.svg) no-repeat;
+    background: url(/images/logo-mobile.png) no-repeat;
     background-size: contain;
     height: 40px;
     width: 40px;
