@@ -16,7 +16,7 @@ export default function CatHead({ title, description, image }) {
         <div
           className={styles.bannerImg}
           style={{
-            background: `url(http://localhost:1338${image.data.attributes.url}) no-repeat`,
+            background: `url(https://api.hostoncoast.ru${image.data.attributes.url}) no-repeat`,
           }}
         ></div>
       )}
