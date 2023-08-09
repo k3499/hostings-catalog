@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_requests",
+  "info": {
+    "singularName": "form-request",
+    "pluralName": "form-requests",
+    "displayName": "Form request"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "sitename": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "promokode": {
+      "type": "string"
+    },
+    "descriprion": {
+      "type": "text"
+    },
+    "owner": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

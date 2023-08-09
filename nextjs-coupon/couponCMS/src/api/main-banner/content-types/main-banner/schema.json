@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "main_banners",
+  "info": {
+    "singularName": "main-banner",
+    "pluralName": "main-banners",
+    "displayName": "MainBanner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "bonus": {
+      "type": "string"
+    }
+  }
+}
