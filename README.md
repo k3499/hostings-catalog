@@ -15,9 +15,6 @@
 - [SWR](https://swr.vercel.app/ru)
 - [Strapi](https://strapi.io/)
 
-<p align="left"><img height="42" width="42" src="https://cdn.simpleicons.org/React/#61DAFB" alt="React"/>
-<img height="42" width="42" src="https://cdn.simpleicons.org/Next.js/#000000" alt="Next.js"/></p>
-
 ## Установка
 
 1. Клонируйте репозиторий: `git clone git@github.com:k3499/hostings-catalog.git`
