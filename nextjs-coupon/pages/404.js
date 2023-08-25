@@ -10,6 +10,7 @@ import notFoundStyles from "../styles/NotFound.module.css";
 const russo = Russo_One({ subsets: ["latin", "cyrillic"], weight: ["400"] });
 
 function Home({ siteList, catList }) {
+  const pageSize = 6;
   return (
     <>
       <Head>
