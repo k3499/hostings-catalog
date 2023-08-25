@@ -1,31 +1,33 @@
-import { useState } from "react"
-import { config } from "@fortawesome/fontawesome-svg-core"
-import axios from 'axios'
-import localFont from "next/font/local"
-import SitesContext from "../components/SitesContext/SitesContext"
-import Popup from '../components/popup/popup';
-import "../styles/normalize.css"
-import "../styles/global.css"
-import "@fortawesome/fontawesome-svg-core/styles.css"
+import { useState } from "react";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import axios from "axios";
+import localFont from "next/font/local";
+import Popup from "../components/popup/popup";
+import "../styles/normalize.css";
+import "../styles/global.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
-config.autoAddCss = false
-const golos = localFont({ src: "./fonts/GolosText-VariableFont_wght.ttf" })
+config.autoAddCss = false;
+const golos = localFont({ src: "./fonts/GolosText-VariableFont_wght.ttf" });
+
+const pageSize = 6; //количество элементов для вывода
 
 function MyApp({ Component, pageProps }) {
-  const [mobileMenu, setMobileMenu] = useState(false)
+  const [mobileMenu, setMobileMenu] = useState(false);
   const [isInfoPopupOpen, setIsInfoPopupOpen] = useState(false);
-  const [popupMessage, setPopupMessage] = useState('');
-  
-  const formSuccessMessage = "Сайт отправлен на проверку. Спасибо за обращение.";
+  const [popupMessage, setPopupMessage] = useState("");
+
+  const formSuccessMessage =
+    "Сайт отправлен на проверку. Спасибо за обращение.";
   const formFailMessage = "Сайт отправлен на проверку. Спасибо за обращение.";
 
   // мобильное меню
   function handleMobileMenu() {
     if (mobileMenu) {
-      setMobileMenu(false)
-      return
+      setMobileMenu(false);
+      return;
     }
-    setMobileMenu(true)
+    setMobileMenu(true);
   }
   //popup
   const openInfoPopup = (message) => {
@@ -36,12 +38,11 @@ function MyApp({ Component, pageProps }) {
   const closeAllPopups = () => {
     setMobileMenu(false);
     setIsInfoPopupOpen(false);
-
   };
-  
+
   // esc закрыть
   const handleEscClose = (event) => {
-    if (event.key === 'Escape') {
+    if (event.key === "Escape") {
       closeAllPopups();
     }
   };
@@ -52,7 +53,7 @@ function MyApp({ Component, pageProps }) {
     }
     closeAllPopups();
   };
-  
+
   const handleSendForm = async (evt) => {
     evt.preventDefault();
     const data = {
@@ -65,17 +66,18 @@ function MyApp({ Component, pageProps }) {
     };
 
     // const endpoint = 'http://localhost:1338/api/form-requests';
-    
-    const endpoint = 'https://api.hostoncoast.ru/api/form-requests';
-    
-      axios.post(endpoint, { data })
+
+    const endpoint = "https://api.hostoncoast.ru/api/form-requests";
+
+    axios
+      .post(endpoint, { data })
       .then((res) => {
         if (res) {
           openInfoPopup(formSuccessMessage);
           evt.target.reset();
         } else {
           openInfoPopup(formFailMessage);
-          console.log("не получили данные ")
+          console.log("не получили данные ");
         }
       })
       .catch((err) => {
@@ -84,22 +86,22 @@ function MyApp({ Component, pageProps }) {
   };
 
   return (
-    
     <div className={golos.className}>
-      
-        <Component
-          {...pageProps}
-          mobileMenu={mobileMenu}
-          handleMobileMenu={handleMobileMenu}
-          handleSendForm={handleSendForm}
-        />
-        <Popup
-          closePopup={closeAllPopups}
-          isOpen={isInfoPopupOpen}
-          message={popupMessage}
-          onClick={handleCLosePopupByClickOnOverlay} />
+      <Component
+        {...pageProps}
+        mobileMenu={mobileMenu}
+        handleMobileMenu={handleMobileMenu}
+        handleSendForm={handleSendForm}
+        pageSize={pageSize}
+      />
+      <Popup
+        closePopup={closeAllPopups}
+        isOpen={isInfoPopupOpen}
+        message={popupMessage}
+        onClick={handleCLosePopupByClickOnOverlay}
+      />
     </div>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

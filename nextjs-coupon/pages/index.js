@@ -15,6 +15,7 @@ function Home({
   siteList,
   catList,
   mainSlider,
+  pageSize,
 }) {
   return (
     <>
@@ -37,7 +38,11 @@ function Home({
           </div>
           <h1 className={homeStyles.title}>Промокоды для хостинга</h1>
           <div className={homeStyles.hr}></div>
-          <Popular siteList={siteList} />
+          <Popular
+            siteList={siteList.data}
+            siteListMeta={siteList.meta}
+            pageSize={pageSize}
+          />
         </main>
       </div>
       <Footer description={homePageText} />
@@ -51,7 +56,7 @@ export async function getStaticProps(context) {
       .all([
         axios.get("http://127.0.0.1:1338/api/homepage"),
         axios.get(
-          "http://127.0.0.1:1338/api/sites-lists?sort[0]=order%3Aasc&populate=logo&populate=slides"
+          "http://127.0.0.1:1338/api/sites-lists?sort[0]=order%3Aasc&populate=logo&pagination[page]=1&pagination[pageSize]=6&populate=slides"
         ),
         axios.get("http://127.0.0.1:1338/api/categories"),
         axios.get("http://127.0.0.1:1338/api/main-banners?populate=image"),
@@ -59,7 +64,7 @@ export async function getStaticProps(context) {
       .then(
         axios.spread((home, sites, categoryAll, slider) => {
           const homePage = home.data.data.attributes;
-          const siteList = sites.data.data;
+          const siteList = sites.data;
           const catList = categoryAll.data.data;
           const mainSlider = slider.data.data;
           return { homePage, siteList, catList, mainSlider };
